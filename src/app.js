@@ -1,11 +1,16 @@
-
+// import angular and ui-router
 import angular from 'angular';
 import uirouter from 'angular-ui-router';
 
+// import CSS and bootstrap
+import './app.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
+// import NavBar
 import Components from './components';
 
+
+// import config file and modules here
 import routing from './app.config';
 import home from './features/home';
 
