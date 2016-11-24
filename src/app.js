@@ -5,6 +5,7 @@ import uirouter from 'angular-ui-router';
 // import CSS and bootstrap
 import './app.css';
 import 'bootstrap/dist/css/bootstrap.css';
+// import 'font-awesome/css/font-awesome.css';
 
 // import NavBar
 import Components from './components';
