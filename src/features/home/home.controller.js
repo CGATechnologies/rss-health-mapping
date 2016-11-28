@@ -11,4 +11,4 @@ export default class HomeController {
   }
 }
 
-HomeController.$inject = ['cartoMap']
+HomeController.$inject = ['cartoMap'];
