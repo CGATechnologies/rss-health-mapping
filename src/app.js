@@ -14,6 +14,7 @@ import Components from './components';
 // import config file and modules here
 import routing from './app.config';
 import home from './features/home';
+import facility from './features/facility';
 
 // let app = () => {
 //   return {
@@ -31,7 +32,7 @@ import home from './features/home';
 
 // const MODULE_NAME = 'app';
 
-angular.module('app', [uirouter, home, Components])
+angular.module('app', [uirouter, home, facility, Components])
   // .directive('app', app)
   // .controller('AppCtrl', AppCtrl)
   .config(routing);
