@@ -1,8 +1,9 @@
-# angular-webpack
+# South Sudan Health Info
 
+A site for all things health info related in South Sudan
+
+## With startup support from the lovely Angular Webpack build, a complete, yet simple, starter pack for Angular 1.5 using Webpack
 [![Dependency Status](https://david-dm.org/preboot/angular-webpack/status.svg)](https://david-dm.org/preboot/angular-webpack#info=dependencies) [![devDependency Status](https://david-dm.org/preboot/angular-webpack/dev-status.svg)](https://david-dm.org/preboot/angular-webpack#info=devDependencies)
-
-A complete, yet simple, starter for Angular using Webpack.
 
 This workflow serves as a starting point for building Angular 1.x applications using Webpack. Should be noted that apart from the pre-installed angular package, this workflow is pretty much generic.
 
