@@ -23,10 +23,10 @@
     "angular": "^1.5.0",
     "angular-sanitize": "^1.5.3",
     "angular-ui-router": "^0.3.2",
-    "angular-xeditable": "^0.5.0",
     "bootstrap": "^3.3.7",
     "cartodb": "^0.5.1",
-    "font-awesome": "^4.7.0"
+    "font-awesome": "^4.7.0",
+    "ng-table": "^2.2.0"
   },
   "devDependencies": {
     "angular-mocks": "^1.5.0",

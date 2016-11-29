@@ -4,11 +4,11 @@ import uirouter from 'angular-ui-router';
 import './table.css';
 
 import routing from './table.routes';
-import TableController from './table.controller';
-import mainTable from './mainTable.service';
+import MyTableController from './table.controller';
+// import mainTable from './mainTable.service';
 // Import other dashboard services here
 
-export default angular.module('app.table', [uirouter, mainTable])
+export default angular.module('app.table', [uirouter])
   .config(routing)
-  .controller('TableController', TableController)
+  .controller('MyTableController', MyTableController)
   .name;

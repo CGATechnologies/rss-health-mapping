@@ -1,47 +1,34 @@
-<div class="jumbotron">
-  <table class="table table-bordered table-hover table-condensed">
-    <tr style="font-weight: bold">
-      <td style="width:35%">Name</td>
-      <td style="width:20%">Status</td>
-      <td style="width:20%">Group</td>
-      <td style="width:25%">Edit</td>
+<!-- <table ng-table="$ctrl.tableParams" show-filter="true" class="table table-condensed table-bordered">
+    <tr ng-repeat="facility in $data">
+        <td data-title="'Name'" header-class="'text-left'" sortable="'name'" filter="{ 'name': 'text' }">
+            {{facility.name}}
+        </td>
+        <td data-title="'Age'" header-class="'text-right'" sortable="'state'" filter="{ 'state': 'text' }">
+            {{facility.state}}
+        </td>
+        <td data-title="'County'" header-class="'text-right'" sortable="'county'" filter="{ 'county': 'text' }">
+            {{facility.county}}
+        </td>
+        <td data-title="'Status'" header-class="'text-right'" sortable="'status'" filter="{ 'status': 'text' }">
+            {{facility.status}}
+        </td>
     </tr>
-    <tr ng-repeat="user in users">
-      <td>
-        <!-- editable username (text with validation) -->
-        <span editable-text="user.name" e-name="name" e-form="rowform" onbeforesave="checkName($data, user.id)">
-          {{ user.name || 'empty' }}
-        </span>
-      </td>
-      <td>
-        <!-- editable status (select-local) -->
-        <span editable-select="user.status" e-name="status" e-form="rowform" e-ng-options="s.value as s.text for s in statuses">
-          {{ showStatus(user) }}
-        </span>
-      </td>
-      <td>
-        <!-- editable group (select-remote) -->
-        <span editable-select="user.group" e-name="group" onshow="loadGroups()" e-form="rowform" e-ng-options="g.id as g.text for g in groups">
-          {{ showGroup(user) }}
-        </span>
-      </td>
-      <td style="white-space: nowrap">
-        <!-- form -->
-        <form editable-form name="rowform" onbeforesave="saveUser($data, user.id)" ng-show="rowform.$visible" class="form-buttons form-inline" shown="inserted == user">
-          <button type="submit" ng-disabled="rowform.$waiting" class="btn btn-primary">
-            save
-          </button>
-          <button type="button" ng-disabled="rowform.$waiting" ng-click="rowform.$cancel()" class="btn btn-default">
-            cancel
-          </button>
-        </form>
-        <div class="buttons" ng-show="!rowform.$visible">
-          <button type="button" class="btn btn-primary" ng-click="rowform.$show()">edit</button>
-          <button type="button" class="btn btn-danger" ng-click="removeUser($index)">del</button>
-        </div>  
-      </td>
-    </tr>
-  </table>
+</table> -->
 
-  <button type="button" class="btn btn-default" ng-click="addUser()">Add row</button>
-</div>
+<table ng-table="$ctrl.tableParams" show-filter="true" class="table table-condensed table-bordered">
+    <tr ng-repeat="facility in $ctrl.facilities">
+        <td data-title="'Name'" header-class="'text-left'" sortable="'name'" filter="{ 'name': 'text' }">
+            {{facility.name}}
+        </td>
+        <td data-title="'State'" header-class="'text-right'" sortable="'state'" filter="{ 'state': 'text' }">
+            {{facility.state}}
+        </td>
+        <td data-title="'County'" header-class="'text-right'" sortable="'county'" filter="{ 'county': 'text' }">
+            {{facility.county}}
+        </td>
+        <td data-title="'Status'" header-class="'text-right'" sortable="'status'" filter="{ 'status': 'text' }">
+            {{facility.status}}
+        </td>
+    </tr>
+</table>
+

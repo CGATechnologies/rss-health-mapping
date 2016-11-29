@@ -3,7 +3,7 @@ import angular from 'angular';
 class cartoMap { 
 
   loadMap() {
-    console.log('hitting')
+    // console.log('hitting')
     let url = 'https://cgamap.carto.com/api/v2/viz/ef0fd039-511e-4c78-a39a-a739351493e7/viz.json';
     cartodb.createVis('map', url, {
         shareable: true,
