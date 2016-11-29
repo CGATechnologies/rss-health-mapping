@@ -1,17 +1,17 @@
 import angular from 'angular';
 
-class dataSources {
+class mainTable {
   constructor($http) {
     this.$http = $http;
   }
   
   // HTTP call to get facility data
-  getSourceMetaData() {
+  getMainTableData() {
     let url = '';
     return this.$http.get(url);
   }
 }
 
-export default angular.module('services.dataSources', [])
-  .service('dataSources', dataSources)
+export default angular.module('services.mainTable', [])
+  .service('mainTable', mainTable)
   .name;

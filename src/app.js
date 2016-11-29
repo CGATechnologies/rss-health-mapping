@@ -1,5 +1,6 @@
 // import angular and ui-router
 import angular from 'angular';
+import xeditable from 'angular-xeditable';
 import uirouter from 'angular-ui-router';
 
 // import CSS and bootstrap
@@ -33,7 +34,7 @@ import dashboard from './features/dashboard';
 
 // const MODULE_NAME = 'app';
 
-angular.module('app', [uirouter, home, facility, dashboard, Components])
+angular.module('app', [xeditable, uirouter, home, facility, dashboard, Components])
   // .directive('app', app)
   // .controller('AppCtrl', AppCtrl)
   .config(routing);
