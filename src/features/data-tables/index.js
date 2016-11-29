@@ -1,14 +1,14 @@
 import angular from 'angular';
 import uirouter from 'angular-ui-router';
 
-import './dash.css';
+import './table.css';
 
-import routing from './dash.routes';
-import DashboardController from './dash.controller';
-import dataSources from './dataSources.service';
+import routing from './table.routes';
+import TableController from './table.controller';
+import mainTable from './mainTable.service';
 // Import other dashboard services here
 
-export default angular.module('app.dash', [uirouter, dataSources])
+export default angular.module('app.table', [uirouter, mainTable])
   .config(routing)
-  .controller('DashboardController', DashboardController)
+  .controller('TableController', TableController)
   .name;
