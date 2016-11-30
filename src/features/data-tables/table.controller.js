@@ -39,7 +39,7 @@ export default class MyTableController {
         this.tableParams = new NgTableParams({}, {
             dataset: facilities
         });
-        console.log(NgTableParams)
+        console.log(this.tableParams)
     }
 }
 
