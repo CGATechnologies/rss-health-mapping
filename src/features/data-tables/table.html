@@ -16,7 +16,7 @@
 </table> -->
 
 <table ng-table="$ctrl.tableParams" show-filter="true" class="table table-condensed table-bordered">
-    <tr ng-repeat="facility in $ctrl.facilities">
+    <tr ng-repeat="facility in table.facilities">
         <td data-title="'Name'" header-class="'text-left'" sortable="'name'" filter="{ 'name': 'text' }">
             {{facility.name}}
         </td>

@@ -5,7 +5,7 @@ export default function routes($stateProvider) {
     .state('table', {
       url: '/data',
       template: require('./table.html'),
-      controller: 'MyTableController'
-      // controllerAs: 'table'
+      controller: 'MyTableController',
+      controllerAs: 'table'
     });
 }
