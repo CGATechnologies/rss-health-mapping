@@ -16,6 +16,13 @@ class cartoMap {
         zoom: 6
     })
     .done((vis, layers) => {
+
+      // Set max zoom out
+      vis.map.set({
+        minZoom: 4,
+        maxZoom: 10
+      });
+
       // layer 0 is the base layer, layer 1 is cartodb layer
       // setInteraction is disabled by default
       layers[1].setInteraction(true);
@@ -28,7 +35,7 @@ class cartoMap {
       // map.setZoom(3);
       // map.panTo([50.5, 30.5]);
     })
-    .error((err) => {
+    .error(function(err) {
       console.log(err);
     });
   }
