@@ -46,7 +46,7 @@ module.exports = function makeWebpackConfig () {
 
     // Output path from the view of the page
     // Uses webpack-dev-server in development
-    publicPath: isProd ? '/' : 'http://0.0.0.0:8080/',
+    publicPath: isProd ? '/' : 'http://0.0.0.0:3333/',
 
     // Filename for entry points
     // Only adds hash in build mode
@@ -206,7 +206,9 @@ module.exports = function makeWebpackConfig () {
    */
   config.devServer = {
     contentBase: './src',
-    stats: 'minimal'
+    stats: 'minimal',
+    host: '0.0.0.0',
+    port: '3333'
   };
 
   return config;

@@ -36,7 +36,7 @@ $ npm install
 $ npm start
 ```
 
-go to [http://localhost:8080](http://localhost:8080) in your browser.
+go to [http://localhost:8080](http://localhost:3333) in your browser.
 
 # Table of Contents
 
