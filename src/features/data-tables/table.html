@@ -18,16 +18,16 @@
 <table ng-table="$ctrl.tableParams" show-filter="true" class="table table-condensed table-bordered">
     <tr ng-repeat="facility in table.facilities">
         <td data-title="'Name'" header-class="'text-left'" sortable="'name'" filter="{ 'name': 'text' }">
-            {{facility.name}}
+            {{ facility.name }}
         </td>
         <td data-title="'State'" header-class="'text-right'" sortable="'state'" filter="{ 'state': 'text' }">
-            {{facility.state}}
+            {{ facility.state }}
         </td>
         <td data-title="'County'" header-class="'text-right'" sortable="'county'" filter="{ 'county': 'text' }">
-            {{facility.county}}
+            {{ facility.county }}
         </td>
         <td data-title="'Status'" header-class="'text-right'" sortable="'status'" filter="{ 'status': 'text' }">
-            {{facility.status}}
+            {{ facility.status }}
         </td>
     </tr>
 </table>

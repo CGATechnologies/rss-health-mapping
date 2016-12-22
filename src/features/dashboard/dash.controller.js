@@ -1,8 +1,14 @@
 export default class DashboardController {
   constructor(dataSources) {
-    dataSources.getSourceMetaData()
+
+    const self = this;
+    dataSources.getAllData()
       // Process data in the 'then' callback below
-      .then()
+      .then(function(dataResponse) {
+        self.items = dataResponse;
+        self.data = self.items.data;
+        console.log(self.data);
+      })
   }
 }
 

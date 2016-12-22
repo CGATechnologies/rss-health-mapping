@@ -1,6 +1,6 @@
 export default class FacilityController {
   constructor(facilityService) {
-    facilityService.getFacilityData()
+    facilityService.getAllFacilities()
       // Process data in the 'then' callback below
       .then()
   }

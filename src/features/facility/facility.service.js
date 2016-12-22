@@ -6,9 +6,10 @@ class facilityService {
   }
   
   // HTTP call to get facility data
-  getFacilityData() {
-    let url = '';
+  getAllFacilities() {
+    let url = 'https://hrisrss.org/api/Sxiopdefuolad89S/facility/';
     return this.$http.get(url);
+    
   }
 }
 
