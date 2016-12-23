@@ -7,7 +7,9 @@ export default class DashboardController {
       .then(function(dataResponse) {
         self.items = dataResponse;
         self.data = self.items.data;
-        console.log(self.data);
+        // edit data with array methods here
+        // save each as self. whatever
+        // call in dashboard route with dashboard.whatever
       })
   }
 }
