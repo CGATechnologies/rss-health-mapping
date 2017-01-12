@@ -4,10 +4,11 @@ class dataSources {
   constructor($http) {
     this.$http = $http;
   }
-  
+
   // HTTP call to get all data
   getAllData() {
-    let url = 'https://jsonplaceholder.typicode.com/posts';
+    // let url = 'https://jsonplaceholder.typicode.com/posts';
+    let url = 'https://hrisrss.org/api/Sxiopdefuolad89S/facility';
     return this.$http.get(url)
       .success(function (data, status, headers, config) {
         return data;
