@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/Foxandxss/angular-webpack-workflow",
   "dependencies": {
-    "angular": "^1.5.0",
+    "angular": "^1.5.7",
     "angular-nvd3": "^1.0.9",
     "angular-sanitize": "^1.5.3",
     "angular-ui-router": "^0.3.2",
@@ -28,6 +28,7 @@
     "cartodb": "^0.5.1",
     "font-awesome": "^4.7.0",
     "font-awesome-webpack": "0.0.4",
+    "less": "^2.7.2",
     "ng-table": "^2.2.0"
   },
   "devDependencies": {

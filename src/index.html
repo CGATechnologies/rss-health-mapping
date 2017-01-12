@@ -1,9 +1,11 @@
 <!doctype html>
 <html ng-app="app" lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>South Sudan Health Info</title>
   <base href="/">
+  <!--CartoDB-->
   <script src="//libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
   <link rel="stylesheet" href="//libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
   <link rel="apple-touch-icon" sizes="57x57" href="./public/img/apple-icon-57x57.png">
@@ -15,7 +17,7 @@
   <link rel="apple-touch-icon" sizes="144x144" href="./public/img/apple-icon-144x144.png">
   <link rel="apple-touch-icon" sizes="152x152" href="./public/img/apple-icon-152x152.png">
   <link rel="apple-touch-icon" sizes="180x180" href="./public/img/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="./public/img/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./public/img/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./public/img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="./public/img/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./public/img/favicon-16x16.png">
@@ -28,9 +30,9 @@
 <body>
   <navbar></navbar>
   <div class="container" style="width:100%;">
-  <!-- <div id="map"></div> -->
+    <!-- <div id="map"></div> -->
     <ui-view></ui-view>
   </div>
-
 </body>
+
 </html>
