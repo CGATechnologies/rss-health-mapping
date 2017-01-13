@@ -16,8 +16,12 @@ export default class DashboardController {
 
     dataSources.getHrissRecentTimestamp()
       .then(function (hrissStamp) {
-        self.hrissStamp = Date.parse(hrissStamp.data);
-        console.log(self.hrissStamp);
+        self.hrissUpdate = Date.parse(hrissStamp.data);
+        let updateDate = new Date(hrissStamp.data);
+        let now = new Date();
+        let oneDay = 1000 * 60 * 60 * 24
+        self.daysSinceUpdate = Math.ceil((now.getTime() - updateDate.getTime()) / oneDay);
+        console.log('blarg', self.daysSinceUpdate)
       });
   }
 }

@@ -7,9 +7,9 @@
       <div class="col-md-2 col-sm-4 col-xs-6 data_sources">
         <div class="data_source">HRISS</div>
         <span class="last_update">last update: 
-          {{ dashboard.hrissStamp | date:'d MMM, y' }}</span>
+          {{ dashboard.hrissUpdate | date:'d MMM, y' }}</span>
         <br>
-        <span class="days_since">days since: <i class="green">{{  }}</i></span>
+        <span class="days_since">days since: <i class="green">{{ dashboard.daysSinceUpdate }}</i></span>
       </div>
       <div class="col-md-2 col-sm-4 col-xs-6 data_sources">
         <div class="data_source">Facility Survey</div>
