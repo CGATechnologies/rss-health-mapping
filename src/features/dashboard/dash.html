@@ -1,5 +1,39 @@
 <div class="container-fluid">
-  <!-- data source tiles -->
+  <!--<progress id="progress" max="100" value="{{dashboard.items.config.progress.progressBar}}"></progress>{{dashboard.items.config.progress.progressCounter}}%-->
+  <!--data source bar-->
+  <div class="centered">
+    <div class="row tile_sources">
+      <div class="col-md-2 col-sm-4 col-xs-6 data_sources"></div>
+      <div class="col-md-2 col-sm-4 col-xs-6 data_sources">
+        <div class="data_source">HRISS</div>
+        <span class="last_update">last update: 
+          {{ dashboard.hrissStamp | date:'d MMM, y' }}</span>
+        <br>
+        <span class="days_since">days since: <i class="green">{{  }}</i></span>
+      </div>
+      <div class="col-md-2 col-sm-4 col-xs-6 data_sources">
+        <div class="data_source">Facility Survey</div>
+        <span class="last_update">last update: {{ }}</span>
+        <br>
+        <span class="days_since">days since: <i class="green">{{  }}</i></span>
+      </div>
+      <div class="col-md-2 col-sm-4 col-xs-6 data_sources">
+        <div class="data_source">SSEPS</div>
+        <span class="last_update">last update: {{ }}</span>
+        <br>
+        <span class="days_since">days since: <i class="green">{{  }}</i></span>
+      </div>
+      <div class="col-md-2 col-sm-4 col-xs-6 data_sources">
+        <div class="data_source">PMIS</div>
+        <span class="last_update">last update: {{ }}</span>
+        <br>
+        <span class="days_since">days since: <i class="green">{{  }}</i></span>
+      </div>
+      <div class="col-md-2 col-sm-4 col-xs-6 data_sources"></div>
+    </div>
+  </div>
+  <!--/data source bar-->
+  <!-- high-level data tiles -->
   <div class="row tile_count">
     <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
       <span class="count_top"><i class="fa fa-user"></i> Total Facilities</span>
@@ -32,9 +66,5 @@
       <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
     </div>
   </div>
-  <!-- /data source tiles -->
-  <!-- second row tiles -->
-  <div class="col-md-2">
-    dashboard: {{ dashboard.data }} # fac: {{ dashboard.facilityCount }}
-  </div>
+  <!-- /high-level data tiles -->
 </div>

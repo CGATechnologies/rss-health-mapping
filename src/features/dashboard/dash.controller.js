@@ -7,10 +7,17 @@ export default class DashboardController {
       .then(function (dataResponse) {
         self.items = dataResponse;
         self.data = self.items.data;
+        console.log(self.items);
         // edit data with array methods here
         // save each as self. whatever
         // call in dashboard route with dashboard.whatever
         self.facilityCount = self.items.data.length;
+      });
+
+    dataSources.getHrissRecentTimestamp()
+      .then(function (hrissStamp) {
+        self.hrissStamp = Date.parse(hrissStamp.data);
+        console.log(self.hrissStamp);
       });
   }
 }
