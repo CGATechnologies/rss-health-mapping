@@ -7,11 +7,10 @@ export default class DashboardController {
       .then(function (dataResponse) {
         self.items = dataResponse;
         self.data = self.items.data;
-        console.log(self.items);
-        // edit data with array methods here
-        // save each as self. whatever
-        // call in dashboard route with dashboard.whatever
+        self.staffCount = self.data.map((fac) => parseInt(fac.StaffCount))
+          .reduce((a, b) => a + b);
         self.facilityCount = self.items.data.length;
+        console.log(self.staffCount);
       });
 
     dataSources.getHrissRecentTimestamp()
@@ -19,9 +18,9 @@ export default class DashboardController {
         self.hrissUpdate = Date.parse(hrissStamp.data);
         let updateDate = new Date(hrissStamp.data);
         let now = new Date();
-        let oneDay = 1000 * 60 * 60 * 24
+        let oneDay = 1000 * 60 * 60 * 24;
         self.hrissDaysSinceUpdate = Math.ceil((now.getTime() - updateDate.getTime()) / oneDay);
-        console.log('blarg', self.hrissDaysSinceUpdate)
+        console.log('blarg', self.hrissDaysSinceUpdate);
       });
   }
 }
