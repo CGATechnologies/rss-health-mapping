@@ -20,8 +20,8 @@ export default class DashboardController {
         let updateDate = new Date(hrissStamp.data);
         let now = new Date();
         let oneDay = 1000 * 60 * 60 * 24
-        self.daysSinceUpdate = Math.ceil((now.getTime() - updateDate.getTime()) / oneDay);
-        console.log('blarg', self.daysSinceUpdate)
+        self.hrissDaysSinceUpdate = Math.ceil((now.getTime() - updateDate.getTime()) / oneDay);
+        console.log('blarg', self.hrissDaysSinceUpdate)
       });
   }
 }
