@@ -7,13 +7,6 @@ export default class MyTableController {
 
   constructor(NgTableParams, hrissTable) {
 
-
-    this.facilities = [
-      { name: "Moroni", status: 'open', state: 'Lol', 'county': 'county1' },
-      { name: "Tiancum", status: 'closed', state: 'Gok', 'county': 'county2' },
-      { name: "Jacob", status: 'open', state: 'Jubek', 'county': 'county3' },
-    ];
-
     const self = this;
     hrissTable.getAllHrissData()
       // Process data in the 'then' callback below
