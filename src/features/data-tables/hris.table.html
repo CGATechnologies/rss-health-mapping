@@ -1,17 +1,63 @@
+<form>
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-addon"><i class="fa fa-search"></i></div>
+
+      <input type="text" class="form-control" placeholder="Search Facilities" ng-model="searchHris">
+
+    </div>
+  </div>
+</form>
 <table class="table table-condensed table-bordered">
   <thead>
     <tr>
-      <td>Facility Name</td>
-      <td>Managing Entity</td>
-      <td>Donors</td>
-      <td>Total Staff</td>
-      <td>State</td>
-      <td>County</td>
-      <td>Payam</td>
+      <td>
+        <a href="#" ng-click="sortType = 'name'; sortReverse = !sortReverse">
+        Facility Name
+        <span ng-show="sortType == 'name && !sortReverse'" class="fa fa-caret-down"></span>
+        <span ng-show="sortType == 'name && sortReverse'" class="fa fa-caret-up"></span>
+      </td>
+      <td>
+        <a href="#" ng-click="sortType = 'manage'; sortReverse = !sortReverse">
+        Managing Entity
+        <span ng-show="sortType == 'manage && !sortReverse'" class="fa fa-caret-down"></span>
+        <span ng-show="sortType == 'manage && sortReverse'" class="fa fa-caret-up"></span>
+      </td>
+      <td>
+        <a href="#" ng-click="sortType = 'donors'; sortReverse = !sortReverse">
+        Donors
+        <span ng-show="sortType == 'donors && !sortReverse'" class="fa fa-caret-down"></span>
+        <span ng-show="sortType == 'donors && sortReverse'" class="fa fa-caret-up"></span>
+      </td>
+      <td>
+        <a href="#" ng-click="sortType = 'staff'; sortReverse = !sortReverse">
+        Total Staff
+        <span ng-show="sortType == 'staff && !sortReverse'" class="fa fa-caret-down"></span>
+        <span ng-show="sortType == 'staff && sortReverse'" class="fa fa-caret-up"></span>
+      </td>
+      <td>
+        <a href="#" ng-click="sortType = 'state'; sortReverse = !sortReverse">
+        State
+        <span ng-show="sortType == 'state && !sortReverse'" class="fa fa-caret-down"></span>
+        <span ng-show="sortType == 'state && sortReverse'" class="fa fa-caret-up"></span>
+      </td>
+      <td>
+        <a href="#" ng-click="sortType = 'county'; sortReverse = !sortReverse">
+        County
+        <span ng-show="sortType == 'county && !sortReverse'" class="fa fa-caret-down"></span>
+        <span ng-show="sortType == 'county && sortReverse'" class="fa fa-caret-up"></span>
+      </td>
+      <td>
+        <a href="#" ng-click="sortType = 'payam'; sortReverse = !sortReverse">
+        Payam
+        <span ng-show="sortType == 'payam && !sortReverse'" class="fa fa-caret-down"></span>
+        <span ng-show="sortType == 'payam && sortReverse'" class="fa fa-caret-up"></span>
+      </td>
+      
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="facility in hrisTable.facilities">
+    <tr ng-repeat="facility in hrisTable.facilities | orderBy:sortType:sortReverse | filter:searchHris">
       <td>{{ facility.fName }}</td>
       <td>{{ facility.fOwnership }}</td>
       <td>{{ facility.fDonors }}</td>

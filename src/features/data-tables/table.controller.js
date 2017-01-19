@@ -10,9 +10,9 @@ export default class hrisTableController {
       .then(function (dataResponse) {
         self.items = dataResponse;
         self.facilities = self.items.data;
-        self.sortType = 'fName';
+        self.sortType = '';
         self.sortReverse = false;
-        self.searchTable = '';
+        self.searchHris = '';
       });
   }
 }
