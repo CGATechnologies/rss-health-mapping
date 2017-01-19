@@ -6,7 +6,7 @@ class dataSources {
   }
 
   // HTTP call to get all data
-  getAllData() {
+  getAllHrissData() {
     // let url = 'https://jsonplaceholder.typicode.com/posts';
     let url = 'https://hrisrss.org/api/Sxiopdefuolad89S/facility';
     let getParams = {

@@ -2,7 +2,7 @@ export default class DashboardController {
   constructor(dataSources) {
 
     const self = this;
-    dataSources.getAllData()
+    dataSources.getAllHrissData()
       // Process data in the 'then' callback below
       .then(function (dataResponse) {
         self.items = dataResponse;

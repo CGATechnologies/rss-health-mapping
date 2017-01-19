@@ -5,10 +5,10 @@ import './table.css';
 
 import routing from './table.routes';
 import MyTableController from './table.controller';
-// import mainTable from './mainTable.service';
+import hrissTable from './hrissTable.service';
 // Import other dashboard services here
 
-export default angular.module('app.table', [uirouter])
+export default angular.module('app.table', [uirouter, hrissTable])
   .config(routing)
   .controller('MyTableController', MyTableController)
   .name;
