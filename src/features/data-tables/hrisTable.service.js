@@ -1,12 +1,12 @@
 import angular from 'angular';
 
-class hrissTable {
+class hrisTable {
   constructor($http) {
     this.$http = $http;
   }
 
   // HTTP call to get facility data
-  getAllHrissData() {
+  getAllHrisData() {
     // let url = 'https://jsonplaceholder.typicode.com/posts';
     let url = 'https://hrisrss.org/api/Sxiopdefuolad89S/facility';
     let getParams = {
@@ -36,6 +36,6 @@ class hrissTable {
   }
 }
 
-export default angular.module('services.hrissTable', [])
-  .service('hrissTable', hrissTable)
+export default angular.module('services.hrisTable', [])
+  .service('hrisTable', hrisTable)
   .name;

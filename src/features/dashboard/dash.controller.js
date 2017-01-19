@@ -2,7 +2,7 @@ export default class DashboardController {
   constructor(dataSources) {
 
     const self = this;
-    dataSources.getAllHrissData()
+    dataSources.getAllHrisData()
       // Process data in the 'then' callback below
       .then(function (dataResponse) {
         self.items = dataResponse;
@@ -13,14 +13,14 @@ export default class DashboardController {
         console.log(self.staffCount);
       });
 
-    dataSources.getHrissRecentTimestamp()
-      .then(function (hrissStamp) {
-        self.hrissUpdate = Date.parse(hrissStamp.data);
-        let updateDate = new Date(hrissStamp.data);
+    dataSources.getHrisRecentTimestamp()
+      .then(function (hrisStamp) {
+        self.hrisUpdate = Date.parse(hrisStamp.data);
+        let updateDate = new Date(hrisStamp.data);
         let now = new Date();
         let oneDay = 1000 * 60 * 60 * 24;
-        self.hrissDaysSinceUpdate = Math.ceil((now.getTime() - updateDate.getTime()) / oneDay);
-        console.log('blarg', self.hrissDaysSinceUpdate);
+        self.hrisDaysSinceUpdate = Math.ceil((now.getTime() - updateDate.getTime()) / oneDay);
+        console.log('blarg', self.hrisDaysSinceUpdate);
       });
   }
 }

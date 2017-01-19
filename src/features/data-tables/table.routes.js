@@ -4,8 +4,8 @@ export default function routes($stateProvider) {
   $stateProvider
     .state('table', {
       url: '/data',
-      template: require('./hriss.table.html'),
+      template: require('./hris.table.html'),
       controller: 'MyTableController',
-      controllerAs: 'table'
+      controllerAs: 'hrisTable'
     });
 }

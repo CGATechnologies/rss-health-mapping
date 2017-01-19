@@ -1,0 +1,24 @@
+<table class="table table-condensed table-bordered">
+  <thead>
+    <tr>
+      <td>Facility Name</td>
+      <td>Managing Entity</td>
+      <td>Donors</td>
+      <td>Total Staff</td>
+      <td>State</td>
+      <td>County</td>
+      <td>Payam</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="facility in hrisTable.facilities">
+      <td>{{ facility.fName }}</td>
+      <td>{{ facility.fOwnership }}</td>
+      <td>{{ facility.fDonors }}</td>
+      <td>{{ facility.StaffCount }}</td>
+      <td>{{ facility.stName }}</td>
+      <td>{{ facility.cName }}</td>
+      <td>{{ facility.pName }}</td>
+    </tr>
+  </tbody>
+</table>

@@ -6,7 +6,7 @@ class dataSources {
   }
 
   // HTTP call to get all data
-  getAllHrissData() {
+  getAllHrisData() {
     // let url = 'https://jsonplaceholder.typicode.com/posts';
     let url = 'https://hrisrss.org/api/Sxiopdefuolad89S/facility';
     let getParams = {
@@ -35,7 +35,7 @@ class dataSources {
       });
   }
 
-  getHrissRecentTimestamp() {
+  getHrisRecentTimestamp() {
     let url = 'https://hrisrss.org/api/Sxiopdefuolad89S/facility/last';
     let getParams = {
       method: 'GET',

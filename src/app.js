@@ -1,6 +1,5 @@
 // import angular and ui-router
 import angular from 'angular';
-import { ngTable } from 'ng-table';
 import uirouter from 'angular-ui-router';
 
 // import CSS, FA, and bootstrap
@@ -35,7 +34,7 @@ import table from './features/data-tables';
 
 // const MODULE_NAME = 'app';
 
-angular.module('app', [ngTable.name, uirouter, home, facility, dashboard, table, Components])
+angular.module('app', [uirouter, home, facility, dashboard, table, Components])
   // .directive('app', app)
   // .controller('AppCtrl', AppCtrl)
   .config(routing);

@@ -5,13 +5,13 @@
     <div class="row tile_sources">
       <div class="col-md-2 col-sm-4 col-xs-6 data_sources"></div>
       <div class="col-md-2 col-sm-4 col-xs-6 data_sources">
-        <div class="data_source">HRISS</div>
+        <div class="data_source">HRIS</div>
         <span class="last_update">last update: 
-          {{ (dashboard.hrissUpdate | date:'d MMM, y') || 'n/a' }}</span>
+          {{ (dashboard.hrisUpdate | date:'d MMM, y') || 'n/a' }}</span>
         <br>
         <span class="days_since">days since: 
-          <i ng-style="{'color': dashboard.hrissDaysSinceUpdate <=30 ? 'black' : 'red'}">
-            {{ dashboard.hrissDaysSinceUpdate || "n/a" }}
+          <i ng-style="{'color': dashboard.hrisDaysSinceUpdate <=30 ? 'black' : 'red'}">
+            {{ dashboard.hrisDaysSinceUpdate || "n/a" }}
             </i>
         </span>
       </div>
