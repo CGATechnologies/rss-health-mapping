@@ -1,7 +1,6 @@
 import angular from 'angular';
 
-export default class hrisTableController {
-
+export default class HrisTableController {
   constructor(hrisTable) {
 
     const self = this;
@@ -10,12 +9,12 @@ export default class hrisTableController {
       .then(function (dataResponse) {
         self.items = dataResponse;
         self.facilities = self.items.data;
-        self.sortType = '';
+        self.sortType = 'staff';
         self.sortReverse = false;
         self.searchHris = '';
       });
   }
 }
 
-hrisTableController.$inject = ['hrisTable'];
+HrisTableController.$inject = [ 'hrisTable' ];
 

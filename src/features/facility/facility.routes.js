@@ -1,4 +1,4 @@
-routes.$inject = ['$stateProvider'];
+routes.$inject = [ '$stateProvider' ];
 
 export default function routes($stateProvider) {
   $stateProvider
@@ -6,6 +6,6 @@ export default function routes($stateProvider) {
       url: '/facility/:facilityId',
       template: require('./facility.html'),
       controller: 'FacilityController',
-      controllerAs: 'facility'
+      controllerAs: 'fac'
     });
 }

@@ -58,7 +58,7 @@
   </thead>
   <tbody>
     <tr ng-repeat="facility in hrisTable.facilities | orderBy:sortType:sortReverse | filter:searchHris">
-      <td>{{ facility.fName }}</td>
+      <td><a ui-sref="facility({ facilityId: facility.FID })">{{ facility.fName }}</a></td>
       <td>{{ facility.fOwnership }}</td>
       <td>{{ facility.fDonors }}</td>
       <td>{{ facility.StaffCount }}</td>
@@ -66,5 +66,5 @@
       <td>{{ facility.cName }}</td>
       <td>{{ facility.pName }}</td>
     </tr>
-  </tbody>
+    </tbody>
 </table>

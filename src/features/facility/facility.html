@@ -1,12 +1,51 @@
-<div class="jumbotron">
-  <div id="facility-title">{{ facility.title }}</div>
-  <button id="return-to-map" class="btn btn-info btn-lg">Return to Map</button>
-  <div id="facility-info">
-    <div id="facility-state">{{ facility.state }}</div>
-    <div id="facility-county">{{ facility.county }}</div>
-    <div id="facility-village">{{ facility.village }}</div>
-    <div id="facility-services">{{ facility.services }}</div>
-    <!-- Need to format staff, as it will likely be in an array -->
-    <div id="facility-staff">{{ facility.staff }}</div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title">{{ fac.facility.fName }}</h3>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-3 col-lg-3 " align="center"> <img alt="{{fac.facility.fName}} location" src="http://i1.wp.com/www.kickassfacts.com/wp-content/uploads/2015/03/SouthSudan.jpg" class="img-circle img-responsive"> </div>
+            <div class=" col-md-9 col-lg-9 ">
+              <table class="table table-user-information">
+                <tbody>
+                  <tr>
+                    <td>State:</td>
+                    <td>{{ fac.facility.stName }}</td>
+                  </tr>
+                  <tr>
+                    <td>County:</td>
+                    <td>{{ fac.facility.cName }}</td>
+                  </tr>
+                  <tr>
+                    <td>Payam:</td>
+                    <td>{{ fac.facility.pName }}</td>
+                  </tr>
+                  <tr>
+                    <tr>
+                      <td>Managing Entity:</td>
+                      <td>{{ fac.facility.fOwnership }}</td>
+                    </tr>
+                    <tr>
+                      <td>Total Staff:</td>
+                      <td>{{ fac.facStaff.length }}</td>
+                    </tr>
+                    <tr>
+                      <td>Male Staff:</td>
+                      <td>{{ fac.maleStaffCount }}</td>
+                    </tr>
+                    <td>Female Staff:</td>
+                    <td>{{ fac.femaleStaffCount }}</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a href="#" class="btn btn-primary">Facility Staff Information</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
