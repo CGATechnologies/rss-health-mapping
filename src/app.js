@@ -2,6 +2,9 @@
 import angular from 'angular';
 import uirouter from 'angular-ui-router';
 
+// import highcharts
+import highcharts from 'highcharts';
+
 // import CSS, FA, and bootstrap
 import './app.css';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -34,7 +37,7 @@ import table from './features/data-tables';
 
 // const MODULE_NAME = 'app';
 
-angular.module('app', [uirouter, home, facility, dashboard, table, Components])
+angular.module('app', [ uirouter, home, facility, dashboard, table, Components ])
   // .directive('app', app)
   // .controller('AppCtrl', AppCtrl)
   .config(routing);
