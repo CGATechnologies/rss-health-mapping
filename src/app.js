@@ -3,7 +3,8 @@ import angular from 'angular';
 import uirouter from 'angular-ui-router';
 
 // import highcharts and highcharts-ng
-import highcharts from 'highcharts';
+// var Highcharts = require('highcharts');
+// require('highcharts/modules/exporting')(Highcharts);
 import 'highcharts-ng';
 
 // import CSS, FA, and bootstrap

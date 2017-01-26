@@ -27,13 +27,13 @@
         </span>
       </div>
       <div class="col-md-2 col-sm-4 col-xs-6 data_sources">
-        <div class="data_source">SSEPS</div>
-        <span class="last_update">last update: {{ (dashboard.ssepsUpdate | date:'d MMM, y') || 'n/a' }}
+        <div class="data_source">HMIS</div>
+        <span class="last_update">last update: {{ (dashboard.hmisUpdate | date:'d MMM, y') || 'n/a' }}
         </span>
         <br>
         <span class="days_since">days since: 
-          <i ng-style="{'color': dashboard.ssepsDaysSinceUpdate <=30 ? 'black' : 'red'}">
-            {{ dashboard.ssepsDaysSinceUpdate || "n/a" }}
+          <i ng-style="{'color': dashboard.hmisDaysSinceUpdate <=30 ? 'black' : 'red'}">
+            {{ dashboard.hmisDaysSinceUpdate || "n/a" }}
           </i>
         </span>
       </div>
@@ -86,4 +86,7 @@
     </div>
   </div>
   <!-- /high-level data tiles -->
-</div>
+
+  <!--facility by type-->
+  <highchart id="chart1" config="dashboard.chartConfig"></highchart>
+  <!--/facility by type-->

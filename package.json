@@ -28,7 +28,6 @@
     "cartodb": "^0.5.1",
     "font-awesome": "^4.7.0",
     "font-awesome-webpack": "0.0.4",
-    "highcharts": "^5.0.7",
     "highcharts-ng": "^1.0.0",
     "less": "^2.7.2"
   },
