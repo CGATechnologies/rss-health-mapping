@@ -6,6 +6,7 @@ import uirouter from 'angular-ui-router';
 // var Highcharts = require('highcharts');
 // require('highcharts/modules/exporting')(Highcharts);
 import 'highcharts-ng';
+import nvd3 from 'angular-nvd3';
 
 // import CSS, FA, and bootstrap
 import './app.css';
@@ -22,7 +23,7 @@ import facility from './features/facility';
 import dashboard from './features/dashboard';
 import table from './features/data-tables';
 
-angular.module('app', [ uirouter, home, facility, dashboard, table, Components, "highcharts-ng" ])
+angular.module('app', [ uirouter, home, facility, dashboard, table, Components, "highcharts-ng", nvd3 ])
   // .directive('app', app)
   // .controller('AppCtrl', AppCtrl)
   .config(routing);

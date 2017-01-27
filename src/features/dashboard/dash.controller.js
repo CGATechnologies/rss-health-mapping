@@ -1,5 +1,5 @@
 export default class DashboardController {
-  constructor(dataSources, facTypeData) {
+  constructor(dataSources) {
 
     this.chartConfig = {
       options: {
@@ -14,7 +14,7 @@ export default class DashboardController {
       yAxis: {
         title: {
           text: 'Throughput MBit/s'
-        }
+        },
       },
       xAxis: {
         title: {
@@ -33,11 +33,7 @@ export default class DashboardController {
       },
       series: [
         {
-          name: 'Inbound',
-          data: [ 29.9, 71.5, 25.4, 43.2, 37.0, 33.0, 35.6, 48.5, 21.4, 19.1, 16.6, 54.4 ]
-        },
-        {
-          name: 'Outbound',
+          name: 'Facility Types',
           data: [ 19.3, 56.3, 23.1, 38.5, 32.9, 27.0, 30.6, 42.3, 17.4, 12.0, 9.1, 34.0 ]
         }
       ]
@@ -52,7 +48,39 @@ export default class DashboardController {
         self.staffCount = self.data.map((fac) => parseInt(fac.StaffCount))
           .reduce((a, b) => a + b);
         self.facilityCount = self.items.data.length;
-        console.log(self.staffCount);
+        self.data.forEach(function (o) {
+          if (o.fTypeCode === "11") {
+            o.fTypeCode = "Teaching Hospital";
+          } else if (o.fTypeCode === "12") {
+            o.fTypeCode = "State Hospital";
+          } else if (o.fTypeCode === "13") {
+            o.fTypeCode = "County Hospital";
+          } else if (o.fTypeCode === "14") {
+            o.fTypeCode = "PHCC";
+          } else if (o.fTypeCode === "15") {
+            o.fTypeCode = "PHCU";
+          } else if (o.fTypeCode === "16") {
+            o.fTypeCode = "Private Clinic";
+          } else if (o.fTypeCode === "17") {
+            o.fTypeCode = "Specialised Hospital/Clinic";
+          } else if (o.fTypeCode === "21") {
+            o.fTypeCode = "Health Training Institution";
+          } else if (o.fTypeCode === "31") {
+            o.fTypeCode = "Ministry Building";
+          } else if (o.fTypeCode === "91") {
+            o.fTypeCode = "Ministry of Health";
+          } else if (o.fTypeCode === "92") {
+            o.fTypeCode = "State Ministry of Health";
+          } else if (o.fTypeCode === "93") {
+            o.fTypeCode = "County Health Department";
+          } else if (o.fTypeCode === "94") {
+            o.fTypeCode = "Payam Health Department";
+          } else if (o.fTypeCode === "96") {
+            o.fTypeCode = "Other";
+          }
+        });
+        self.facType = self.data.map(o => o.fTypeCode);
+
       });
 
     dataSources.getHrisRecentTimestamp()

@@ -109,3 +109,342 @@ webpack: bundle is now INVALID.
 Child [1mhtml-webpack-plugin for "index.html"[22m:
     chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
 webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 70% 1/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 70% 1/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 70% 1/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 70% 1/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB[1m[32m [rendered][39m[22m
+
+[1m[31mERROR in ./src/features/dashboard/dash.controller.js
+Module build failed: SyntaxError: Unexpected token (57:6)
+
+  55 |         console.log(self.staffCount);
+  56 |         self.facType = 
+> 57 |       });
+     |       ^
+  58 | 
+  59 |     dataSources.getHrisRecentTimestamp()
+  60 |       .then(function (hrisStamp) {
+
+ @ ./src/features/dashboard/index.js 21:13-41[39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 70% 1/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB[1m[32m [rendered][39m[22m
+
+[1m[31mERROR in ./src/features/dashboard/dash.controller.js
+Module build failed: SyntaxError: Unexpected token (57:6)
+
+  55 |         console.log(self.staffCount);
+  56 |         self.facType = 
+> 57 |       });
+     |       ^
+  58 | 
+  59 |     dataSources.getHrisRecentTimestamp()
+  60 |       .then(function (hrisStamp) {
+
+ @ ./src/features/dashboard/index.js 21:13-41[39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 70% 1/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 70% 1/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 70% 1/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 70% 1/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 70% 1/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 70% 1/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 70% 1/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 70% 1/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 70% 1/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 70% 1/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 70% 1/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 70% 1/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 70% 1/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 70% 1/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 70% 1/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 70% 1/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB[1m[32m [rendered][39m[22m
+
+[1m[31mERROR in ./src/features/dashboard/dash.controller.js
+Module build failed: SyntaxError: Unexpected token, expected , (66:0)
+
+  64 |           });
+  65 |       }
+> 66 | }
+     | ^
+  67 | 
+  68 |   DashboardController.$inject = [ 'dataSources', 'facTypeData' ];
+
+ @ ./src/features/dashboard/index.js 21:13-41[39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+webpack: wait until bundle finished: /public/img/favicon-16x16.png
+  0% compile 10% 0/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB
+
+[1m[31mERROR in ./src/features/dashboard/dash.controller.js
+Module build failed: SyntaxError: Unexpected token, expected , (67:0)
+
+  65 |           });
+  66 |       }
+> 67 | }
+     | ^
+  68 | 
+  69 |   DashboardController.$inject = [ 'dataSources', 'facTypeData' ];
+
+ @ ./src/features/dashboard/index.js 21:13-41[39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 70% 1/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 70% 1/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB[1m[32m [rendered][39m[22m
+
+[1m[31mERROR in ./src/features/dashboard/dash.controller.js
+Module build failed: SyntaxError: Unexpected token (107:3)
+
+  105 | 
+  106 |     console.log(facType);
+> 107 |   });
+      |    ^
+  108 | 
+  109 |   dataSources.getHrisRecentTimestamp()
+  110 |       .then(function (hrisStamp) {
+
+ @ ./src/features/dashboard/index.js 21:13-41[39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 70% 1/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 70% 1/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 70% 1/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 70% 1/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 70% 1/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 70% 1/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 70% 1/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 70% 1/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 70% 1/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 70% 1/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 70% 1/1 build modules              71% seal 73% optimize 75% hashing  76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 70% 1/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 70% 1/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 70% 1/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 70% 1/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 70% 1/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 70% 1/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 70% 1/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 70% 1/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 70% 1/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 70% 1/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 70% 1/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 70% 1/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 70% 1/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 2.28 MB[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 70% 1/1 build modules 40% 1/2 build modules 70% 2/2 build modules 50% 2/3 build modules 70% 3/3 build modules 54% 3/4 build modules 70% 4/4 build modules 57% 4/5 build modules 70% 5/5 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 3.29 MB[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 22% 1/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 3.29 MB[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+  0% compile 10% 0/1 build modules 70% 1/1 build modules              71% seal 73% optimize  75% hashing 76% create chunk assets 78% additional chunk assets   80% optimize chunk assets       90% optimize assets            95% emit         chunk    {[1m[33m0[39m[22m} [1m[32mapp.bundle.js[39m[22m (app) 3.29 MB[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 2.18 kB
+webpack: bundle is now VALID.
