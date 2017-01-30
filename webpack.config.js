@@ -8,6 +8,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 var ngAnnotate = require('ng-annotate');
+var d3 = require("d3-webpack-loader!");
 
 /**
  * Env
@@ -81,13 +82,13 @@ module.exports = function makeWebpackConfig() {
   // Initialize module
   config.module = {
     preLoaders: [],
-    loaders: [{
+    loaders: [ {
       // JS LOADER
       // Reference: https://github.com/babel/babel-loader
       // Transpile .js files using babel-loader
       // Compiles ES6 and ES7 into ES5 code
       test: /\.js$/,
-      loaders: ['ng-annotate', 'babel'],
+      loaders: [ 'ng-annotate', 'babel' ],
       exclude: /node_modules/
     }, {
       // CSS LOADER
@@ -117,7 +118,7 @@ module.exports = function makeWebpackConfig() {
       // Reference: https://github.com/huston007/ng-annotate-loader
       // Webpack loader to annotate angular applications. Generates a sourcemaps as well
       test: /src.*\.js$/,
-      loaders: ['ng-annotate']
+      loaders: [ 'ng-annotate' ]
     }, {
       // HTML LOADER
       // Reference: https://github.com/webpack/raw-loader
@@ -160,7 +161,7 @@ module.exports = function makeWebpackConfig() {
    */
   config.postcss = [
     autoprefixer({
-      browsers: ['last 2 version']
+      browsers: [ 'last 2 version' ]
     })
   ];
 
@@ -205,7 +206,7 @@ module.exports = function makeWebpackConfig() {
 
       // Copy assets from the public folder
       // Reference: https://github.com/kevlened/copy-webpack-plugin
-      new CopyWebpackPlugin([{
+      new CopyWebpackPlugin([ {
         from: __dirname + '/src'
       }])
     )

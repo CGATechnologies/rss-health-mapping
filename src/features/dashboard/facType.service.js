@@ -1,6 +1,6 @@
 import angular from 'angular';
 
-class facTypeData {
+class facType {
   constructor($http) {
     this.$http = $http;
   }
@@ -36,6 +36,6 @@ class facTypeData {
   }
 }
 
-export default angular.module('services.facTypeData', [])
-  .service('facTypeData', facTypeData)
+export default angular.module('services.facType', [])
+  .service('facType', facType)
   .name;
