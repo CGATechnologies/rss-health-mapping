@@ -26,11 +26,8 @@
     "angular-ui-router": "^0.3.2",
     "bootstrap": "^3.3.7",
     "cartodb": "^0.5.1",
-    "d3": "^3.5.17",
-    "d3-webpack-loader": "^0.1.1",
     "font-awesome": "^4.7.0",
     "font-awesome-webpack": "0.0.4",
-    "highcharts-ng": "^1.0.0",
     "less": "^2.7.2"
   },
   "devDependencies": {

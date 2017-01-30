@@ -8,7 +8,6 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 var ngAnnotate = require('ng-annotate');
-var d3 = require("d3-webpack-loader!");
 
 /**
  * Env
