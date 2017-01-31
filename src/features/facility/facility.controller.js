@@ -22,10 +22,17 @@ export default class FacilityController {
           }
         });
 
+        // getting all cases right
+        self.facStaff.forEach(role => {
+          role.nrLocalName = role.nrLocalName.replace(/\b[a-z]/g, function (f) { return f.toUpperCase(); });
+          role.rcName = role.rcName.replace(/\b[a-z]/g, function (f) { return f.toUpperCase(); });
+          role.rtName = role.rtName.replace(/\b[a-z]/g, function (f) { return f.toUpperCase(); });
+        });
+
         // Counting roles at each facility
         self.roleCount = d3.nest()
           .key(function (d) { return d.nrLocalName; })
-          .rollup(function (v) { return v.length })
+          .rollup(function (v) { return v.length; })
           .entries(self.facStaff);
 
         // Sorting roles alphabetically
@@ -40,7 +47,9 @@ export default class FacilityController {
           }
         });
 
-        // show/hide onclick
+
+
+        // show/hide DIV onclick
         self.isVisible = false;
         self.ShowHide = function () {
           // If DIV is visible it will be hidden, and vice versa
