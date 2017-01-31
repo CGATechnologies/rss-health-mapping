@@ -60,14 +60,12 @@ export default class DashboardController {
               bottom: 120,
               left: 50
             },
-            color: function () {
-              return '#ff0000';
-            },
+            color: [ '#FF6021', '#FFA021', '#1F6AA4', '#17AF6E' ],
             x: function (d) { return d.key; },
             y: function (d) { return d.value; },
             showValues: true,
             valueFormat: function (d) {
-              return d3.format(',.0f')(d);
+              return d3.format(',')(d);
             },
             transitionDuration: 100,
             xAxis: {
