@@ -6,12 +6,11 @@ import './dash.css';
 import routing from './dash.routes';
 import DashboardController from './dash.controller';
 import dataSources from './dataSources.service';
-import facTypeData from './facType.service';
-import facTypeComponent from './facType.component';
-// import hChart from './test.directive';
+import facTypeChart from './facility-type-chart';
 // Import other dashboard services here
 
-export default angular.module('app.dash', [ uirouter, dataSources, facTypeData ])
+export default angular.module('app.dash', [ uirouter, dataSources ])
   .config(routing)
   .controller('DashboardController', DashboardController)
+  .directive('facTypeChart', () => new facTypeChart())
   .name;
