@@ -41,7 +41,27 @@
                   </tr>
                 </tbody>
               </table>
-              <a href="#" class="btn btn-primary">Facility Staff Information</a>
+              <a href="#" value="show/hide staff" ng-click="fac.ShowHide()" class="btn btn-primary">
+              Facility Staff Information
+              </a>
+              <br>
+              <br>
+            </div>
+            <div class="col-md-3 col-lg-3" align="center"></div>
+            <div ng-show="fac.isVisible" class="col-md-9 col-lg-9">
+              <table class="table table-staff-information">
+                <tbody>
+                  <tr>
+                    <th>Role</th>
+                    <th>Number of Staff</th>
+                  </tr>
+                  <tr ng-repeat="staff in fac.roleCount">
+                    <td>{{ staff.key }}: </td>
+                    <td>{{ staff.values }}</td>
+                    <!--<td>{{ fac.facility.stName }}</td>-->
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
