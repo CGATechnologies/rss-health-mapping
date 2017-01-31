@@ -1,6 +1,12 @@
+import STATES from './test';
+console.table(STATES);
+
 export default class DashboardController {
-  constructor(dataSources) {
+  constructor(dataSources, options) {
     const self = this;
+
+    self.states = STATES;
+    console.log(self.states);
 
     dataSources.getAllHrisData()
       // Process data in the 'then' callback below
