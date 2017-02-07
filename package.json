@@ -1,5 +1,5 @@
 {
-  "name": "angular-webpack-workflow",
+  "name": "rss-health-mapping",
   "version": "1.0.0",
   "description": "A workflow for Angular made with Webpack",
   "scripts": {
@@ -7,18 +7,12 @@
     "server": "webpack-dev-server --history-api-fallback --inline --progress",
     "test": "karma start",
     "test-watch": "karma start --auto-watch --no-single-run",
-    "start": "npm run server"
+    "start": "npm run server",
+    "deploy": "NODE_ENV=production webpack -p --config webpack.production.config.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Foxandxss/angular-webpack-workflow.git"
-  },
-  "author": "Jesus Rodriguez",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Foxandxss/angular-webpack-workflow/issues"
-  },
-  "homepage": "https://github.com/Foxandxss/angular-webpack-workflow",
+  "author": "Joshua Swiss",
+  "license": "CGA",
+  "homepage": "https://charliegoldsmithassociates.co.uk",
   "dependencies": {
     "angular": "^1.5.7",
     "angular-nvd3": "^1.0.9",
