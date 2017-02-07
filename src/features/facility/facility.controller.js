@@ -31,7 +31,7 @@ export default class FacilityController {
 
         // Counting roles at each facility
         self.roleCount = d3.nest()
-          .key(function (d) { return d.nrLocalName; })
+          .key(function (d) { return d.rtName; })
           .rollup(function (v) { return v.length; })
           .entries(self.facStaff);
 
