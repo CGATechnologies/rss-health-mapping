@@ -7,8 +7,7 @@
     "server": "webpack-dev-server --history-api-fallback --inline --progress",
     "test": "karma start",
     "test-watch": "karma start --auto-watch --no-single-run",
-    "start": "npm run server",
-    "deploy": "NODE_ENV=production webpack -p --config webpack.production.config.js"
+    "start": "npm run server"
   },
   "author": "Joshua Swiss",
   "license": "CGA",
