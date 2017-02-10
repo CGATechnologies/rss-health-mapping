@@ -56,6 +56,14 @@ export default class DashboardController {
           o.RoleCount = +o.RoleCount;
         });
 
+        self.hrisFacFilter = self.items.filter(function (d) {
+          return d.StaffCount > 0;
+        });
+        self.hrisFacProportion = (self.hrisFacFilter.length / self.items.length) * 100;
+        console.log(self.hrisFacProportion);
+
+
+
         // staff average by facility type
         self.staffAvgByFacilityType = d3.nest()
           .key(function (d) { return d.fTypeCode; })
@@ -64,7 +72,7 @@ export default class DashboardController {
             return (d3.mean(v, function (d)
             { return d.StaffCount; }));
           })
-          .map(self.items);
+          .map(self.hrisFacFilter);
 
         // staff count by facility type
         self.staffCountByFacilityType = d3.nest()
@@ -74,7 +82,7 @@ export default class DashboardController {
             return (d3.sum(v, function (d)
             { return d.StaffCount; }));
           })
-          .map(self.items);
+          .map(self.hrisFacFilter);
 
         console.log(self.staffCountByFacilityType);
 
