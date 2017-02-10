@@ -1,11 +1,10 @@
-import STATES from './test';
+import facilityTypeCount from './chart-facility-type-count';
 
 export default class DashboardController {
   constructor(dataSources, options) {
+
     const self = this;
 
-    self.states = STATES;
-    // console.log(self.states);
 
     dataSources.getAllHrisData()
       // Process data in the 'then' callback below
@@ -85,40 +84,10 @@ export default class DashboardController {
           return r;
         }, {});
         self.facTypeChartData = d3.entries(self.facTypeCount);
-        // console.log(self.facTypeChartData);
 
-
-        // move this to new file and import!
-        self.options = {
-          chart: {
-            type: 'discreteBarChart',
-            height: 250,
-            margin: {
-              top: 10,
-              right: 30,
-              bottom: 120,
-              left: 50
-            },
-            color: [ '#FF6021', '#FFA021', '#1F6AA4', '#17AF6E' ],
-            x: function (d) { return d.key; },
-            y: function (d) { return d.value; },
-            showValues: true,
-            valueFormat: function (d) {
-              return d3.format(',')(d);
-            },
-            transitionDuration: 100,
-            xAxis: {
-              axisLabel: 'X Axis',
-              rotateLabels: -45
-            },
-            yAxis: {
-              axisLabel: 'Y Axis',
-              axisLabelDistance: 30
-            }
-          }
-        };
-
-        self.data = [ {
+        // Chart: Count of Facilities by Type
+        self.chartFacTypeCountOptions = facilityTypeCount.facilityTypeCount.options;
+        self.chartFacTypeCountData = [ {
           key: "Cumulative Return",
           values: self.facTypeChartData
         }];

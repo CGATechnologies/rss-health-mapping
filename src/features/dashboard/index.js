@@ -6,7 +6,6 @@ import './dash.css';
 import routing from './dash.routes';
 import DashboardController from './dash.controller';
 import dataSources from './dataSources.service';
-import facTypeChart from './facility-type-chart';
 // Import other dashboard services here
 
 export default angular.module('app.dash', [ uirouter, dataSources ])
