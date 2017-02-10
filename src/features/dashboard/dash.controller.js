@@ -1,12 +1,11 @@
 import STATES from './test';
-console.table(STATES);
 
 export default class DashboardController {
   constructor(dataSources, options) {
     const self = this;
 
     self.states = STATES;
-    console.log(self.states);
+    // console.log(self.states);
 
     dataSources.getAllHrisData()
       // Process data in the 'then' callback below
@@ -16,6 +15,8 @@ export default class DashboardController {
         self.staffCount = self.items.map((fac) => parseInt(fac.StaffCount))
           .reduce((a, b) => a + b);
         self.facilityCount = self.items.length;
+
+        // convert fTypeCode to name from code
         self.items.forEach(function (o) {
           if (o.fTypeCode === "11") {
             o.fTypeCode = "Teaching Hospital";
@@ -47,15 +48,47 @@ export default class DashboardController {
             o.fTypeCode = "Other";
           }
         });
+
         self.facType = self.items.map(o => o.fTypeCode);
+
+        // parse strings to ints for staff and role counts
+        self.items.forEach(function (o) {
+          o.StaffCount = +o.StaffCount;
+          o.RoleCount = +o.RoleCount;
+        });
+
+        // staff average by facility type
+        self.staffAvgByFacilityType = d3.nest()
+          .key(function (d) { return d.fTypeCode; })
+          .sortKeys(d3.ascending)
+          .rollup(function (v) {
+            return (d3.mean(v, function (d)
+            { return d.StaffCount; }));
+          })
+          .map(self.items);
+
+        // staff count by facility type
+        self.staffCountByFacilityType = d3.nest()
+          .key(function (d) { return d.fTypeCode; })
+          .sortKeys(d3.ascending)
+          .rollup(function (v) {
+            return (d3.sum(v, function (d)
+            { return d.StaffCount; }));
+          })
+          .map(self.items);
+
+        console.log(self.staffCountByFacilityType);
+
         // count of facilities by type
         self.facTypeCount = self.facType.reduce((r, a) => {
           r[ a ] = (r[ a ] || 0) + 1;
           return r;
         }, {});
         self.facTypeChartData = d3.entries(self.facTypeCount);
-        console.log(self.facTypeChartData);
+        // console.log(self.facTypeChartData);
 
+
+        // move this to new file and import!
         self.options = {
           chart: {
             type: 'discreteBarChart',
