@@ -11,5 +11,5 @@ import dataSources from './dataSources.service';
 export default angular.module('app.dash', [ uirouter, dataSources ])
   .config(routing)
   .controller('DashboardController', DashboardController)
-  .directive('facTypeChart', () => new facTypeChart())
+  // .service('dataSources', [ dataSources ])
   .name;
