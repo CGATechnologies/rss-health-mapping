@@ -11,5 +11,4 @@ import dataSources from './dataSources.service';
 export default angular.module('app.dash', [ uirouter, dataSources ])
   .config(routing)
   .controller('DashboardController', DashboardController)
-  // .service('dataSources', [ dataSources ])
   .name;
