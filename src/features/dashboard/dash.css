@@ -194,6 +194,17 @@
   }
 }
 
+a {
+  text-decoration: none !important;
+  color: black;
+}
+
+a:hover {
+  color: #1A5077;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 
 /*#chart1 {
   width: 100% !important;

@@ -12,7 +12,7 @@
           {{ (dashboard.hrisUpdate | date:'d MMM, y') || 'n/a' }}</span>
         <br>
         <span class="days_since">days since: 
-          <i ng-style="{'color': dashboard.hrisDaysSinceUpdate <=30 ? 'black' : 'red'}">
+          <i ng-style="{'color': dashboard.hrisDaysSinceUpdate <=30 ? 'green' : 'red'}">
             {{ dashboard.hrisDaysSinceUpdate || "n/a" }}
             </i>
         </span>
@@ -25,7 +25,7 @@
         </span>
         <br>
         <span class="days_since">days since: 
-          <i ng-style="{'color': dashboard.facDaysSinceUpdate <=30 ? 'black' : 'red'}">
+          <i ng-style="{'color': dashboard.facDaysSinceUpdate <=30 ? 'green' : 'red'}">
             {{ dashboard.facDaysSinceUpdate || "n/a" }}
           </i>
         </span>
@@ -38,7 +38,7 @@
         </span>
         <br>
         <span class="days_since">days since: 
-          <i ng-style="{'color': dashboard.hmisDaysSinceUpdate <=30 ? 'black' : 'red'}">
+          <i ng-style="{'color': dashboard.hmisDaysSinceUpdate <=30 ? 'green' : 'red'}">
             {{ dashboard.hmisDaysSinceUpdate || "n/a" }}
           </i>
         </span>
@@ -51,7 +51,7 @@
         </span>
         <br>
         <span class="days_since">days since: 
-          <i ng-style="{'color': dashboard.pmisDaysSinceUpdate <=30 ? 'black' : 'red'}">
+          <i ng-style="{'color': dashboard.pmisDaysSinceUpdate <=30 ? 'green' : 'red'}">
             {{ dashboard.pmisDaysSinceUpdate || "n/a" }}
           </i>
         </span>
