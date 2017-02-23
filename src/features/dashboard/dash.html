@@ -5,7 +5,9 @@
     <div class="row tile_sources">
       <div class="col-md-2 col-sm-4 col-xs-6 data_sources"></div>
       <div class="col-md-2 col-sm-4 col-xs-6 data_sources">
-        <div class="data_source">HRIS</div>
+        <a ui-sref="hris">
+          <div class="data_source">HRIS</div>
+        </a>
         <span class="last_update">last update: 
           {{ (dashboard.hrisUpdate | date:'d MMM, y') || 'n/a' }}</span>
         <br>
@@ -16,7 +18,9 @@
         </span>
       </div>
       <div class="col-md-2 col-sm-4 col-xs-6 data_sources">
-        <div class="data_source">Facility Survey</div>
+        <a ui-sref="surveys">
+          <div class="data_source">Facility Survey</div>
+        </a>
         <span class="last_update">last update: {{ (dashboard.facUpdate | date:'d MMM, y') || 'n/a' }}
         </span>
         <br>
@@ -27,7 +31,9 @@
         </span>
       </div>
       <div class="col-md-2 col-sm-4 col-xs-6 data_sources">
-        <div class="data_source">HMIS</div>
+        <a ui-sref="dhis">
+          <div class="data_source">HMIS</div>
+        </a>
         <span class="last_update">last update: {{ (dashboard.hmisUpdate | date:'d MMM, y') || 'n/a' }}
         </span>
         <br>
@@ -38,7 +44,9 @@
         </span>
       </div>
       <div class="col-md-2 col-sm-4 col-xs-6 data_sources">
-        <div class="data_source">PMIS</div>
+        <a ui-sref="pmis">
+          <div class="data_source">PMIS</div>
+        </a>
         <span class="last_update">last update: {{ (dashboard.pmisUpdate | date:'d MMM, y') || 'n/a' }}
         </span>
         <br>
