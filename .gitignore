@@ -1,3 +1,5 @@
 node_modules
 dist
 coverage
+.jshintrc
+.s3-website.json
