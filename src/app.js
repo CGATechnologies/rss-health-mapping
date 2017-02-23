@@ -22,8 +22,9 @@ import home from './features/home';
 import facility from './features/facility';
 import dashboard from './features/dashboard';
 import table from './features/data-tables';
+import pillars from './features/pillars';
 
-angular.module('app', [ uirouter, home, facility, dashboard, table, Components, "nvd3" ])
+angular.module('app', [ uirouter, home, facility, dashboard, table, pillars, Components, "nvd3" ])
   // .directive('app', app)
   // .controller('AppCtrl', AppCtrl)
   .config(routing);
