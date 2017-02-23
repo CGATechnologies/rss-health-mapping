@@ -5,14 +5,19 @@ class NavBarController {
 
     this.brand = 'South Sudan Health Info';
 
-    this.items = [{
+    this.items = [ {
       href: '/dashboard',
       label: 'Dashboard',
       isActive: true
     },
     {
-      href: '/data',
-      label: 'Data',
+      href: '/pillars',
+      label: 'Health Pillars',
+      isActive: true
+    },
+    {
+      href: '/tables',
+      label: 'Tables',
       isActive: true
     },
     {
