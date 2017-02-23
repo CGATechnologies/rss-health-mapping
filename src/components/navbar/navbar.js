@@ -11,7 +11,7 @@ class NavBarController {
       isActive: true
     },
     {
-      href: '/pillars',
+      href: '/health-pillars',
       label: 'Health Pillars',
       isActive: true
     },
