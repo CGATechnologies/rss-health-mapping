@@ -1,4 +1,9 @@
 #map {
   width: 100%;
-  heigth: 80%;
+  height: 80%;
+}
+
+.preloader {
+  padding: 50px;
+  background: url('../../public/preloaders/preloader_5.gif') no-repeat 50% 50% transparent;
 }

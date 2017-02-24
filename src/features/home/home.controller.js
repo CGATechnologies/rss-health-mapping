@@ -1,8 +1,13 @@
 export default class HomeController {
   constructor(cartoMap) {
 
+    const self = this;
+    self.dataLoaded = false;
     //Inject the cartoMap Service
-    cartoMap.loadMap();
+    cartoMap.loadMap()
+      .then(function () {
+        self.dataLoaded = true;
+      })
   }
 }
 
