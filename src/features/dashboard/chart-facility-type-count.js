@@ -15,7 +15,7 @@ export default {
         y: function (d) { return d.value; },
         showValues: true,
         valueFormat: function (d) {
-          return d3.format(',')(d);
+          return d3.format('d')(d);
         },
         transitionDuration: 100,
         xAxis: {
@@ -25,7 +25,40 @@ export default {
         yAxis: {
           axisLabel: 'Y Axis',
           axisLabelDistance: 30
-        }
+        },
+        // tooltip: {
+        //   contentGenerator: function (e) {
+        //     const series = e.series[ 0 ];
+        //     if (series.value === null) return;
+        //     const rows = `
+        //     <tr>
+        //       <td class="key">Number of facilities: </td>
+        //       <td class="value">${e.value}</td>
+        //     </tr>
+        //     `;
+        //     const header = `
+        //       <thead>
+        //         <tr>
+        //           <td className="legend-color-guide">
+        //             <div style="background-color: ${series.color};"></div>
+        //           </td>
+        //           <td>
+        //             <strong>${e.key}</strong>
+        //           </td>
+        //         </tr>
+        //       </thead>
+        //     `;
+        //     return `
+        //     <table>
+        //       ${header}
+        //       <tbody>
+        //         ${rows}
+        //       </tbody>
+        //     </table>
+        //     `;
+        //   }
+        // },
+
       }
     }
   }

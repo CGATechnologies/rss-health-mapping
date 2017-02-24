@@ -99,6 +99,7 @@ export default class DashboardController {
           key: "Cumulative Return",
           values: self.facTypeChartData
         }];
+        console.log(self.facTypeChartData);
       });
 
     dataSources.getHrisRecentTimestamp()
