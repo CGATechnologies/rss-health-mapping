@@ -2,8 +2,3 @@
   width: 100%;
   height: 80%;
 }
-
-.preloader {
-  padding: 50px;
-  background: url('../../public/preloaders/preloader_5.gif') no-repeat 50% 50% transparent;
-}

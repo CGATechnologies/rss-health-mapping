@@ -7,6 +7,10 @@ export default class DashboardController {
 
     self.dataLoaded = false;
 
+    self.resizeEvent = function (e) {
+      window.resize(e);
+    }
+
     dataSources.getAllHrisData()
       // Process data in the 'then' callback below
       .then(function (dataResponse) {
