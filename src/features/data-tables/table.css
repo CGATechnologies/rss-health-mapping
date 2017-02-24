@@ -2,3 +2,7 @@
   padding: 50px;
   background: url('../../public/preloaders/preloader_5.gif') no-repeat 50% 50% transparent;
 }
+
+.strong-header {
+  font-weight: bold;
+}
