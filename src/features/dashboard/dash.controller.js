@@ -59,8 +59,8 @@ export default class DashboardController {
         self.hrisFacFilter = self.items.filter(function (d) {
           return d.StaffCount > 0;
         });
-        self.hrisFacProportion = (self.hrisFacFilter.length / self.items.length) * 100;
-        console.log(self.hrisFacProportion);
+        self.hrisFacProportion = (self.hrisFacFilter.length / self.items.length);
+        console.log('yo', self.hrisFacProportion);
 
 
 

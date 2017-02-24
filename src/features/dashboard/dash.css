@@ -209,3 +209,12 @@ a:hover {
 /*#chart1 {
   width: 100% !important;
 }*/
+
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+  display: none !important;
+}
