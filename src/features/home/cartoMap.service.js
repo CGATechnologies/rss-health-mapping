@@ -3,7 +3,17 @@ import angular from 'angular';
 class cartoMap {
 
   loadMap() {
-    // console.log('hitting')
+    console.log('hitting map service');
+
+    let currentHeight = window.innerHeight - 50;
+    let mapHeight = document.getElementById('map').style.height;
+
+    if (currentHeight < mapHeight) {
+      mapHeight = currentHeight;
+    }
+
+    console.log(mapHeight);
+    console.log(currentHeight);
     let url = 'https://cgamap.carto.com/api/v2/viz/ef0fd039-511e-4c78-a39a-a739351493e7/viz.json';
     cartodb.createVis('map', url, {
       shareable: true,
