@@ -59,53 +59,56 @@
       <div class="col-md-2 col-sm-4 col-xs-6 data_sources"></div>
     </div>
   </div>
+  <div ng-hide="dashboard.dataLoaded" class="preloader"></div>
   <!--/data source bar-->
   <!-- high-level data tiles -->
-  <div class="row tile_count">
-    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-      <span class="count_top"><i class="fa fa-h-square"></i> Total Facilities</span>
-      <div class="count">{{ dashboard.facilityCount | number: fractionSize }}</div>
-      <!--<span class="count_bottom"><i class="green">4% </i> From last Week</span>-->
-    </div>
-    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-      <span class="count_top"><i class="fa fa-h-square"></i> Facilities with HRIS data</span>
-      <div class="count" ng-cloak>{{ dashboard.hrisFacProportion | percentage:0 }}</div>
-      <!--<span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>-->
-    </div>
-    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-      <span class="count_top"><i class="fa fa-user-md"></i> Total Staff</span>
-      <div class="count">{{ dashboard.staffCount | number: fractionSize }}</div>
-      <!--<span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i> From last Week</span>-->
-    </div>
-    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-      <span class="count_top"><i class="fa fa-user-md"></i> Total PHCC Staff</span>
-      <div class="count">
-        {{ dashboard.staffCountByFacilityType.PHCC | number: fractionSize }}
+  <div ng-show="dashboard.dataLoaded">
+    <div class="row tile_count">
+      <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <span class="count_top"><i class="fa fa-h-square"></i> Total Facilities</span>
+        <div class="count">{{ dashboard.facilityCount | number: fractionSize }}</div>
+        <!--<span class="count_bottom"><i class="green">4% </i> From last Week</span>-->
       </div>
-      <!--<span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i> From last Week</span>-->
-    </div>
-    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-      <span class="count_top"><i class="fa fa-user-md"></i> Average Staff per PHCC</span>
-      <div class="count">
-        {{ dashboard.staffAvgByFacilityType.PHCC | number: 0 }}
+      <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <span class="count_top"><i class="fa fa-h-square"></i> Facilities with HRIS data</span>
+        <div class="count" ng-cloak>{{ dashboard.hrisFacProportion | percentage:0 }}</div>
+        <!--<span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>-->
       </div>
-      <!--<span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>-->
+      <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <span class="count_top"><i class="fa fa-user-md"></i> Total Staff</span>
+        <div class="count">{{ dashboard.staffCount | number: fractionSize }}</div>
+        <!--<span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i> From last Week</span>-->
+      </div>
+      <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <span class="count_top"><i class="fa fa-user-md"></i> Total PHCC Staff</span>
+        <div class="count">
+          {{ dashboard.staffCountByFacilityType.PHCC | number: fractionSize }}
+        </div>
+        <!--<span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i> From last Week</span>-->
+      </div>
+      <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <span class="count_top"><i class="fa fa-user-md"></i> Average Staff per PHCC</span>
+        <div class="count">
+          {{ dashboard.staffAvgByFacilityType.PHCC | number: 0 }}
+        </div>
+        <!--<span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>-->
+      </div>
+      <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <span class="count_top"><i class="fa fa-desktop"></i> HRIS data in HRIS states</span>
+        <div class="count">75%</div>
+        <!--<span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>-->
+      </div>
     </div>
-    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-      <span class="count_top"><i class="fa fa-desktop"></i> HRIS data in HRIS states</span>
-      <div class="count">75%</div>
-      <!--<span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>-->
-    </div>
-  </div>
 
-  <!-- /high-level data tiles -->
+    <!-- /high-level data tiles -->
 
-  <!--facility by type-->
-  <div class="col-md-6 col-sm-6 col-xs-8 tile_facility_count">
-    <div class="fac-count-container">
-      <h3 class="card-title">Count of Facilities by Type</h3>
-      <nvd3 options="dashboard.chartFacTypeCountOptions" data="dashboard.chartFacTypeCountData"></nvd3>
+    <!--facility by type-->
+    <div class="col-md-6 col-sm-6 col-xs-8 tile_facility_count">
+      <div class="fac-count-container">
+        <h3 class="card-title">Count of Facilities by Type</h3>
+        <nvd3 options="dashboard.chartFacTypeCountOptions" data="dashboard.chartFacTypeCountData"></nvd3>
+      </div>
     </div>
+    <!--/facility by type-->
   </div>
-  <!--/facility by type-->
 </div>

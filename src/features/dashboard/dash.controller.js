@@ -5,11 +5,15 @@ export default class DashboardController {
 
     const self = this;
 
+    self.dataLoaded = false;
 
     dataSources.getAllHrisData()
       // Process data in the 'then' callback below
       .then(function (dataResponse) {
         self.response = dataResponse;
+
+        // dataLoaded to show stuff on page
+        self.dataLoaded = true;
         self.items = self.response.data;
         self.staffCount = self.items.map((fac) => parseInt(fac.StaffCount))
           .reduce((a, b) => a + b);
