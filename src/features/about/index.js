@@ -7,7 +7,7 @@ import routing from './about.routes';
 import AboutController from './about.controller';
 import about from './about.service';
 
-export default angular.module('app.home', [ uirouter, about ])
+export default angular.module('app.about', [ uirouter, about ])
   .config(routing)
   .controller('AboutController', AboutController)
   .name;
