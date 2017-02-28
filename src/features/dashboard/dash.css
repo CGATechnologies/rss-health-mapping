@@ -195,15 +195,17 @@
 }
 
 a {
-  text-decoration: none !important;
   color: black;
+  text-decoration: underline;
 }
 
+
+/*
 a:hover {
   color: #1A5077;
   text-decoration: none;
   cursor: pointer;
-}
+}*/
 
 
 /*#chart1 {

@@ -4,6 +4,7 @@ export default class HrisTableController {
   constructor(hrisTable) {
 
     const self = this;
+
     self.dataLoaded = false;
     hrisTable.getAllHrisData()
       // Process data in the 'then' callback below
