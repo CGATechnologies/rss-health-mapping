@@ -47,7 +47,62 @@ export default class FacilityController {
           }
         });
 
+        /*------------------
+        Pillar Rating System
+        -------------------*/
 
+        // Rating data
+        self.pieData = [
+          {label: "pillar 1", value: 20},
+          {label: "pillar 2", value: 20},
+          {label: "pillar 3", value: 20},
+          {label: "pillar 4", value: 20},
+          {label: "pillar 5", value: 20},
+          {label: "pillar 6", value: 20}
+        ];
+
+        // set dimensions of chart. Width, height, radius
+        let w = 300;
+        let h = 300;
+        let r = 100;
+
+        const color = d3.scale.ordinal()
+          .domain(["pillar 1", "pillar 2", "pillar 3", "pillar 4", "pillar 5", "pillar 6"])
+          .range(["#FF9F1C", "#A8DADC", "#E76F51", "#457B9D", "#A5FFD6", "#E71D36" ]);
+
+        const vis = d3.select("pie")
+          .append("svg:svg")
+          .data([self.pieData])
+          .attr("width", w)
+          .attr("height", h)
+          .append("svg:g")
+          .attr("transform", "translate("+ r +", "+ r +")");
+
+        const arc = d3.svg.arc()
+          .outerRadius(r);
+
+        const pie = d3.layout.pie()
+          .value(function(d) { return d.value; });
+
+        const arcs = vis.selectAll("g.slice")
+          .data(pie)
+          .enter()
+          .append("svg:g")
+          .attr("class", "slice");
+
+        arcs.append("svg:path")
+          .attr("fill", function(d, i) { return color(i); })
+          .attr("d", arc);
+
+        arcs.append("svg:text")
+          .attr("transform", function(d) {
+            d.innerRadius = 0;
+            d.outerRadius = r;
+            return "translate("+ arc.centroid(d) +")";
+          })
+          .attr("text-anchor", "middle")
+          .text(function(d, i) { return self.pieData[i].label; });
+        
 
         // show/hide DIV onclick
         self.isVisible = false;
