@@ -11,3 +11,43 @@
   font-size: 12pt;
   font-family: Roboto;
 }
+
+.pillar1 .fa-circle {
+  color: #FF9F1C;
+}
+
+.pillar2 .fa-circle {
+  color: #A8DADC;
+}
+
+.pillar3 .fa-circle {
+  color: #E76F51;
+}
+
+.pillar4 .fa-circle {
+  color: #35A7FF;
+}
+
+.pillar5 .fa-circle {
+  color: #A5FFD6;
+}
+
+.pillar6 .fa-circle {
+  color: #E71D36;
+}
+
+table#table-ratings-legend td.legend-cell {
+  padding: 0px;
+  margin: 0px;
+  border-top: 0;
+}
+
+
+/*table#table-ratings-legend>thead>tr>th,
+.table>tbody>tr>th,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>tbody>tr>td,
+.table>tfoot>tr>td {
+  border-top: 0;
+}*/
