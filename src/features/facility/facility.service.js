@@ -13,6 +13,7 @@ class facilityService {
     let getParams = {
       method: 'GET',
       url: url,
+      cache: true,
       transformRequest: angular.identity,
       progress: function (e) {
         console.log(e);

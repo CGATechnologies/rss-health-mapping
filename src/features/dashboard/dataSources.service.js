@@ -12,6 +12,7 @@ class dataSources {
     let getParams = {
       method: 'GET',
       url: url,
+      cache: true,
       transformRequest: angular.identity,
       progress: function (e) {
         console.log(e);
@@ -40,6 +41,7 @@ class dataSources {
     let getParams = {
       method: 'GET',
       url: url,
+      cache: true,
       transformRequest: angular.identity,
       progress: function (e) {
         console.log(e);
