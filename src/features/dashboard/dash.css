@@ -212,16 +212,23 @@ a:hover {
   width: 100% !important;
 }*/
 
-[ng\:cloak],
+
+/*[ng\:cloak],
 [ng-cloak],
 [data-ng-cloak],
 [x-ng-cloak],
 .ng-cloak,
 .x-ng-cloak {
   display: none !important;
-}
+}*/
 
 .preloader {
   padding: 50px;
   background: url('../../public/preloaders/preloader_5.gif') no-repeat 50% 50% transparent;
+}
+
+.progress-meter text {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
 }
