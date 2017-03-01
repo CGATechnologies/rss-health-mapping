@@ -1,14 +1,72 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad">
+    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xs-offset-0 col-sm-offset-0 col-md-offset-2 col-lg-offset-2 toppad">
       <div class="panel panel-info">
         <div class="panel-heading">
           <h3 class="panel-title">{{ fac.facility.fName }}</h3>
         </div>
         <div class="panel-body">
           <div class="row">
-            <div class="col-md-3 col-lg-3 " align="center"> <img alt="{{fac.facility.fName}} location" src="http://i1.wp.com/www.kickassfacts.com/wp-content/uploads/2015/03/SouthSudan.jpg" class="img-circle img-responsive"> </div>
-            <div class=" col-md-9 col-lg-9 ">
+            <div class="col-md-4 col-lg-4" align="center">
+              <pie></pie>
+              <br>
+              <br>
+              <div class="rating-legend">
+                <table class="table" id="table-ratings-legend">
+                  <tbody>
+                    <tr>
+                      <td class="legend-cell">
+                        <span class="pillar1"><i class="fa fa-circle"></i></span>
+                      </td>
+                      <td class="legend-cell">
+                        <p class="pillar-name">Pillar 1</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="legend-cell">
+                        <span class="pillar2"><i class="fa fa-circle"></i></span>
+                      </td>
+                      <td class="legend-cell">
+                        <p class="pillar-name">Pillar 2</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="legend-cell">
+                        <span class="pillar3"><i class="fa fa-circle"></i></span>
+                      </td>
+                      <td class="legend-cell">
+                        <p class="pillar-name">Pillar 3</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="legend-cell">
+                        <span class="pillar4"><i class="fa fa-circle"></i></span>
+                      </td>
+                      <td class="legend-cell">
+                        <p class="pillar-name">Pillar 4</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="legend-cell">
+                        <span class="pillar5"><i class="fa fa-circle"></i></span>
+                      </td>
+                      <td class="legend-cell">
+                        <p class="pillar-name">Pillar 5</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="legend-cell">
+                        <span class="pillar6"><i class="fa fa-circle"></i></span>
+                      </td>
+                      <td class="legend-cell">
+                        <p class="pillar-name">Pillar 6</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class=" col-md-8 col-lg-8 col-lg-8">
               <table class="table table-user-information">
                 <tbody>
                   <tr>
@@ -36,9 +94,10 @@
                       <td>Male Staff:</td>
                       <td>{{ fac.maleStaffCount }}</td>
                     </tr>
-                    <td>Female Staff:</td>
-                    <td>{{ fac.femaleStaffCount }}</td>
-                  </tr>
+                    <tr>
+                      <td>Female Staff:</td>
+                      <td>{{ fac.femaleStaffCount }}</td>
+                    </tr>
                 </tbody>
               </table>
             </div>
@@ -50,8 +109,8 @@
               </a>
             <br>
             <br>
-            <div class="col-md-3 col-lg-3" align="center"></div>
-            <div ng-show="fac.isVisible" class="col-md-9 col-lg-9">
+            <div class="col-md-4 col-lg-4" align="center"></div>
+            <div ng-show="fac.isVisible" class="col-md-8 col-lg-8">
               <table class="table table-staff-information">
                 <tbody>
                   <tr>

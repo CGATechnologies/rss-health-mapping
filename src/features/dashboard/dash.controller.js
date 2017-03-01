@@ -1,7 +1,7 @@
 import facilityTypeCount from './chart-facility-type-count';
 
 export default class DashboardController {
-  constructor(dataSources, options) {
+  constructor(dataSources, ona) {
 
     const self = this;
 
@@ -68,7 +68,7 @@ export default class DashboardController {
           return d.StaffCount > 0;
         });
         self.hrisFacProportion = (self.hrisFacFilter.length / self.items.length);
-        console.log('yo', self.hrisFacProportion);
+        // console.log('yo', self.hrisFacProportion);
 
 
 
@@ -92,7 +92,7 @@ export default class DashboardController {
           })
           .map(self.hrisFacFilter);
 
-        console.log(self.staffCountByFacilityType);
+        // console.log(self.staffCountByFacilityType);
 
         // count of facilities by type
         self.facTypeCount = self.facType.reduce((r, a) => {
@@ -107,7 +107,7 @@ export default class DashboardController {
           key: "Cumulative Return",
           values: self.facTypeChartData
         }];
-        console.log(self.facTypeChartData);
+        // console.log(self.facTypeChartData);
       });
 
     dataSources.getHrisRecentTimestamp()
@@ -118,7 +118,19 @@ export default class DashboardController {
         let oneDay = 1000 * 60 * 60 * 24;
         self.hrisDaysSinceUpdate = Math.ceil((now.getTime() - updateDate.getTime()) / oneDay);
       });
+
+    // get ona metadata
+    ona.getFacilitySurveyMetaData()
+      .then(function (facSurvey) {
+
+        self.facSurveyMetaData = facSurvey.data;
+        self.facSurveyCount = self.facSurveyMetaData.filter(k => k.formid === "179398")[ 0 ].submissions;
+        self.chdSurveyCount = self.facSurveyMetaData.filter(k => k.formid === "179432")[ 0 ].submissions;
+        self.donorSurveyCount = self.facSurveyMetaData.filter(k => k.formid === "157221")[ 0 ].submissions;
+        self.ngoSurveyCount = self.facSurveyMetaData.filter(k => k.formid === "183415")[ 0 ].submissions;
+
+      });
   }
 }
 
-DashboardController.$inject = [ 'dataSources' ];
+DashboardController.$inject = [ 'dataSources', 'ona' ];
