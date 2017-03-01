@@ -51,3 +51,7 @@ table#table-ratings-legend td.legend-cell {
 .table>tfoot>tr>td {
   border-top: 0;
 }*/
+
+div#tile-survey-progress div {
+  display: inline;
+}
