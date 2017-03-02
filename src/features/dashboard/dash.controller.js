@@ -141,7 +141,7 @@ export default class DashboardController {
           };
 
           const margin = {
-            'top': 0,
+            'top': 5,
             'left': 0,
             'right': 0,
             'bottom': 0
@@ -149,7 +149,7 @@ export default class DashboardController {
 
           const radius = 50;
           const border = 5;
-          const padding = 15;
+          const padding = 17;
           const startPercent = 0;
           let endPercent = self.facSurveyCount / 1200;
           const twoPi = Math.PI * 2;
@@ -215,6 +215,7 @@ export default class DashboardController {
             .attr("y", 0 - (margin.top - boxSize))
             .attr("text-anchor", "middle")
             .style("font-size", "10px")
+            .style("padding-bottom", "5px")
             .text("Health Facilities");
 
           function updateProgress(progress) {
@@ -247,7 +248,7 @@ export default class DashboardController {
           };
 
           const margin = {
-            'top': 0,
+            'top': 5,
             'left': 0,
             'right': 0,
             'bottom': 0
@@ -255,7 +256,7 @@ export default class DashboardController {
 
           const radius = 50;
           const border = 5;
-          const padding = 15;
+          const padding = 20;
           const startPercent = 0;
           let endPercent = self.chdSurveyCount / 138;
           const twoPi = Math.PI * 2;
@@ -353,7 +354,7 @@ export default class DashboardController {
           };
 
           const margin = {
-            'top': 0,
+            'top': 5,
             'left': 0,
             'right': 0,
             'bottom': 0
@@ -361,7 +362,7 @@ export default class DashboardController {
 
           const radius = 50;
           const border = 5;
-          const padding = 15;
+          const padding = 20;
           const startPercent = 0;
           let endPercent = self.donorSurveyCount / 138;
           const twoPi = Math.PI * 2;
@@ -426,6 +427,7 @@ export default class DashboardController {
             .attr("x", (boxSize / 2))
             .attr("y", 0 - (margin.top - boxSize))
             .attr("text-anchor", "middle")
+            .style("padding-bottom", "5px")
             .style("font-size", "10px")
             .text("Donors");
 
@@ -459,7 +461,7 @@ export default class DashboardController {
           };
 
           const margin = {
-            'top': 0,
+            'top': 5,
             'left': 0,
             'right': 0,
             'bottom': 0
@@ -467,7 +469,7 @@ export default class DashboardController {
 
           const radius = 50;
           const border = 5;
-          const padding = 15;
+          const padding = 20;
           const startPercent = 0;
           let endPercent = self.ngoSurveyCount / 100;
           const twoPi = Math.PI * 2;
@@ -532,6 +534,7 @@ export default class DashboardController {
             .attr("x", (boxSize / 2))
             .attr("y", 0 - (margin.top - boxSize))
             .attr("text-anchor", "middle")
+            .style("padding-bottom", "5px")
             .style("font-size", "10px")
             .text("NGOs");
 
@@ -553,10 +556,6 @@ export default class DashboardController {
             }
           })();
         })();
-
-
-        /* Progress Chart 2: CHD */
-
       });
   }
 }
