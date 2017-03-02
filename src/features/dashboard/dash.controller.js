@@ -1,5 +1,4 @@
 import facilityTypeCount from './chart-facility-type-count';
-import facProgress from './chart-progress';
 
 export default class DashboardController {
   constructor(dataSources, ona) {
@@ -131,235 +130,369 @@ export default class DashboardController {
         self.donorSurveyCount = self.facSurveyMetaData.filter(k => k.formid === "157221")[ 0 ].submissions;
         self.ngoSurveyCount = self.facSurveyMetaData.filter(k => k.formid === "183415")[ 0 ].submissions;
 
-        // facProgress.facProgress();
+        (function facilitySurveyProgress() {
 
-        //Facility Survey Progress Chart
-        const colors = {
-          'green': '#A5FFD6',
-          'orange': '#FF9F1C',
-          'amber': '#E76F51',
-          'blue': '#35A7FF'
-        };
+          const colors = {
+            'green': '#A5FFD6',
+            'orange': '#FF9F1C',
+            'amber': '#E76F51',
+            'blue': '#35A7FF'
+          };
 
-        const radius = 50;
-        const border = 5;
-        const padding = 15;
-        const startPercent = 0;
-        let endFacPercent = self.facSurveyCount / 1200;
-        let endCHDPercent = self.chdSurveyCount / 138;
-        let endNGOPercent = self.ngoSurveyCount / 100;
-        let endDonorPercent = self.donorSurveyCount / 15;
-        const twoPi = Math.PI * 2;
-        const formatPercent = d3.format('.0%');
-        const boxSize = (radius + padding) * 2;
+          const radius = 50;
+          const border = 5;
+          const padding = 15;
+          const startPercent = 0;
+          let endPercent = self.facSurveyCount / 1200;
+          const twoPi = Math.PI * 2;
+          const formatPercent = d3.format('.0%');
+          const boxSize = (radius + padding) * 2;
 
-        let countFac = Math.abs((endFacPercent - startPercent) / 0.01);
-        let stepFac = endFacPercent < startPercent ? -0.01 : 0.01;
-        let countNGO = Math.abs((endNGOPercent - startPercent) / 0.01);
-        let stepNGO = endNGOPercent < startPercent ? -0.01 : 0.01;
-        let countCHD = Math.abs((endCHDPercent - startPercent) / 0.01);
-        let stepCHD = endCHDPercent < startPercent ? -0.01 : 0.01;
-        let countDonor = Math.abs((endDonorPercent - startPercent) / 0.01);
-        let stepDonor = endDonorPercent < startPercent ? -0.01 : 0.01;
+          let count = Math.abs((endPercent - startPercent) / 0.01);
+          let step = endPercent < startPercent ? -0.01 : 0.01;
 
-        const arc = d3.svg.arc()
-          .startAngle(0)
-          .innerRadius(radius)
-          .outerRadius(radius - border);
+          const arc = d3.svg.arc()
+            .startAngle(0)
+            .innerRadius(radius)
+            .outerRadius(radius - border);
 
-        const parentFac = d3.select('div#fac-survey-progress');
-        const parentNGO = d3.select('div#NGO-survey-progress');
-        const parentCHD = d3.select('div#CHD-survey-progress');
-        const parentDonor = d3.select('div#donor-survey-progress');
+          const parent = d3.select('div#fac-survey-progress');
 
-        const svgFac = parentFac.append('svg')
-          .attr('width', boxSize)
-          .attr('height', boxSize);
-        const svgNGO = parentNGO.append('svg')
-          .attr('width', boxSize)
-          .attr('height', boxSize);
-        const svgCHD = parentCHD.append('svg')
-          .attr('width', boxSize)
-          .attr('height', boxSize);
-        const svgDonor = parentDonor.append('svg')
-          .attr('width', boxSize)
-          .attr('height', boxSize);
+          const svg = parent.append('svg')
+            .attr('width', boxSize)
+            .attr('height', boxSize);
 
-        const defsFac = svgFac.append('defs');
-        const defsCHD = svgCHD.append('defs');
-        const defsNGO = svgNGO.append('defs');
-        const defsDonor = svgDonor.append('defs');
+          const defs = svg.append('defs');
 
-        const filterFac = defsFac.append('filter')
-          .attr('id', 'blur');
-        const filterCHD = defsCHD.append('filter')
-          .attr('id', 'blur');
-        const filterNGO = defsNGO.append('filter')
-          .attr('id', 'blur');
-        const filterDonor = defsDonor.append('filter')
-          .attr('id', 'blur');
+          const filter = defs.append('filter')
+            .attr('id', 'blur');
 
-        filterFac.append('feGaussianBlur')
-          .attr('in', 'SourceGraphic')
-          .attr('stdDeviation', '7');
-        filterDonor.append('feGaussianBlur')
-          .attr('in', 'SourceGraphic')
-          .attr('stdDeviation', '7');
-        filterCHD.append('feGaussianBlur')
-          .attr('in', 'SourceGraphic')
-          .attr('stdDeviation', '7');
-        filterNGO.append('feGaussianBlur')
-          .attr('in', 'SourceGraphic')
-          .attr('stdDeviation', '7');
+          // filter.append('feGaussianBlur')
+          //   .attr('in', 'SourceGraphic')
+          //   .attr('stdDeviation', '7');
 
-        const gFac = svgFac.append('g')
-          .attr('transform', 'translate(' + boxSize / 2 + ',' + boxSize / 2 + ')');
-        const gNGO = svgNGO.append('g')
-          .attr('transform', 'translate(' + boxSize / 2 + ',' + boxSize / 2 + ')');
-        const gCHD = svgCHD.append('g')
-          .attr('transform', 'translate(' + boxSize / 2 + ',' + boxSize / 2 + ')');
-        const gDonor = svgDonor.append('g')
-          .attr('transform', 'translate(' + boxSize / 2 + ',' + boxSize / 2 + ')');
+          const g = svg.append('g')
+            .attr('transform', 'translate(' + boxSize / 2 + ',' + boxSize / 2 + ')');
 
-        const meterFac = gFac.append('g')
-          .attr('class', 'progress-meter');
-        const meterNGO = gNGO.append('g')
-          .attr('class', 'progress-meter');
-        const meterCHD = gCHD.append('g')
-          .attr('class', 'progress-meter');
-        const meterDonor = gDonor.append('g')
-          .attr('class', 'progress-meter');
+          const meter = g.append('g')
+            .attr('class', 'progress-meter');
 
-        meterFac.append('path')
-          .attr('class', 'background')
-          .attr('fill', '#ccc')
-          .attr('fill-opacity', 0.5)
-          .attr('d', arc.endAngle(twoPi));
-        meterNGO.append('path')
-          .attr('class', 'background')
-          .attr('fill', '#ccc')
-          .attr('fill-opacity', 0.5)
-          .attr('d', arc.endAngle(twoPi));
-        meterCHD.append('path')
-          .attr('class', 'background')
-          .attr('fill', '#ccc')
-          .attr('fill-opacity', 0.5)
-          .attr('d', arc.endAngle(twoPi));
-        meterDonor.append('path')
-          .attr('class', 'background')
-          .attr('fill', '#ccc')
-          .attr('fill-opacity', 0.5)
-          .attr('d', arc.endAngle(twoPi));
+          meter.append('path')
+            .attr('class', 'background')
+            .attr('fill', '#ccc')
+            .attr('fill-opacity', 0.5)
+            .attr('d', arc.endAngle(twoPi));
 
-        const foregroundFac = meterFac.append('path')
-          .attr('class', 'foreground')
-          .attr('fill', colors.green)
-          .attr('fill-opacity', 1)
-          .attr('stroke', colors.green)
-          .attr('stroke-width', 5)
-          .attr('stroke-opacity', 1)
-          .attr('filter', 'url(#blur)');
-        const foregroundCHD = meterCHD.append('path')
-          .attr('class', 'foreground')
-          .attr('fill', colors.orange)
-          .attr('fill-opacity', 1)
-          .attr('stroke', colors.orange)
-          .attr('stroke-width', 5)
-          .attr('stroke-opacity', 1)
-          .attr('filter', 'url(#blur)');
-        const foregroundNGO = meterNGO.append('path')
-          .attr('class', 'foreground')
-          .attr('fill', colors.amber)
-          .attr('fill-opacity', 1)
-          .attr('stroke', colors.amber)
-          .attr('stroke-width', 5)
-          .attr('stroke-opacity', 1)
-          .attr('filter', 'url(#blur)');
-        const foregroundDonor = meterDonor.append('path')
-          .attr('class', 'foreground')
-          .attr('fill', colors.blue)
-          .attr('fill-opacity', 1)
-          .attr('stroke', colors.blue)
-          .attr('stroke-width', 5)
-          .attr('stroke-opacity', 1)
-          .attr('filter', 'url(#blur)');
+          const foreground = meter.append('path')
+            .attr('class', 'foreground')
+            .attr('fill', colors.orange)
+            .attr('fill-opacity', 1)
+            .attr('stroke', colors.orange)
+            .attr('stroke-width', 5)
+            .attr('stroke-opacity', 1)
+            .attr('filter', 'url(#blur)');
 
-        const frontFac = meterFac.append('path')
-          .attr('class', 'foreground')
-          .attr('fill', colors.green)
-          .attr('fill-opacity', 1);
-        const frontCHD = meterCHD.append('path')
-          .attr('class', 'foreground')
-          .attr('fill', colors.orange)
-          .attr('fill-opacity', 1);
-        const frontNGO = meterNGO.append('path')
-          .attr('class', 'foreground')
-          .attr('fill', colors.amber)
-          .attr('fill-opacity', 1);
-        const frontDonor = meterDonor.append('path')
-          .attr('class', 'foreground')
-          .attr('fill', colors.blue)
-          .attr('fill-opacity', 1);
+          const front = meter.append('path')
+            .attr('class', 'foreground')
+            .attr('fill', colors.orange)
+            .attr('fill-opacity', 1);
 
+          const numberText = meter.append('text')
+            .attr('fill', '#000000')
+            .attr('text-anchor', 'middle')
+            .attr('dy', '.35em');
 
-        const numberTextFac = meterFac.append('text')
-          .attr('fill', '#000000')
-          .attr('text-anchor', 'middle')
-          .attr('dy', '.35em');
-        const numberTextCHD = meterCHD.append('text')
-          .attr('fill', '#000000')
-          .attr('text-anchor', 'middle')
-          .attr('dy', '.35em');
-        const numberTextNGO = meterNGO.append('text')
-          .attr('fill', '#000000')
-          .attr('text-anchor', 'middle')
-          .attr('dy', '.35em');
-        const numberTextDonor = meterDonor.append('text')
-          .attr('fill', '#000000')
-          .attr('text-anchor', 'middle')
-          .attr('dy', '.35em');
-
-        function updateProgress(progress) {
-          foregroundFac.attr('d', arc.endAngle(twoPi * progress));
-          frontFac.attr('d', arc.endAngle(twoPi * progress));
-          numberTextFac.text(formatPercent(progress));
-          foregroundCHD.attr('d', arc.endAngle(twoPi * progress));
-          frontCHD.attr('d', arc.endAngle(twoPi * progress));
-          numberTextCHD.text(formatPercent(progress));
-          foregroundNGO.attr('d', arc.endAngle(twoPi * progress));
-          frontNGO.attr('d', arc.endAngle(twoPi * progress));
-          numberTextNGO.text(formatPercent(progress));
-          foregroundDonor.attr('d', arc.endAngle(twoPi * progress));
-          frontDonor.attr('d', arc.endAngle(twoPi * progress));
-          numberTextDonor.text(formatPercent(progress));
-        }
-
-        let progress = startPercent;
-
-        (function loops() {
-          updateProgress(progress);
-
-          if (countFac > 0) {
-            countFac--;
-            progress += stepFac;
-            setTimeout(loops, 10);
+          function updateProgress(progress) {
+            foreground.attr('d', arc.endAngle(twoPi * progress));
+            front.attr('d', arc.endAngle(twoPi * progress));
+            numberText.text(formatPercent(progress));
           }
-          if (countCHD > 0) {
-            countCHD--;
-            progress += stepCHD;
-            setTimeout(loops, 10);
-          }
-          if (countNGO > 0) {
-            countNGO--;
-            progress += stepNGO;
-            setTimeout(loops, 10);
-          }
-          if (countDonor > 0) {
-            countDonor--;
-            progress += stepDonor;
-            setTimeout(loops, 10);
-          }
+
+          let progress = startPercent;
+
+          (function loops() {
+            updateProgress(progress);
+
+            if (count > 0) {
+              count--;
+              progress += step;
+              setTimeout(loops, 10);
+            }
+          })();
         })();
+        (function chdSurveyProgress() {
+
+          const colors = {
+            'green': '#A5FFD6',
+            'orange': '#FF9F1C',
+            'amber': '#E76F51',
+            'blue': '#35A7FF'
+          };
+
+          const radius = 50;
+          const border = 5;
+          const padding = 15;
+          const startPercent = 0;
+          let endPercent = self.chdSurveyCount / 138;
+          const twoPi = Math.PI * 2;
+          const formatPercent = d3.format('.0%');
+          const boxSize = (radius + padding) * 2;
+
+          let count = Math.abs((endPercent - startPercent) / 0.01);
+          let step = endPercent < startPercent ? -0.01 : 0.01;
+
+          const arc = d3.svg.arc()
+            .startAngle(0)
+            .innerRadius(radius)
+            .outerRadius(radius - border);
+
+          const parent = d3.select('div#CHD-survey-progress');
+
+          const svg = parent.append('svg')
+            .attr('width', boxSize)
+            .attr('height', boxSize);
+
+          const defs = svg.append('defs');
+
+          const filter = defs.append('filter')
+            .attr('id', 'blur');
+
+          // filter.append('feGaussianBlur')
+          //   .attr('in', 'SourceGraphic')
+          //   .attr('stdDeviation', '7');
+
+          const g = svg.append('g')
+            .attr('transform', 'translate(' + boxSize / 2 + ',' + boxSize / 2 + ')');
+
+          const meter = g.append('g')
+            .attr('class', 'progress-meter');
+
+          meter.append('path')
+            .attr('class', 'background')
+            .attr('fill', '#ccc')
+            .attr('fill-opacity', 0.5)
+            .attr('d', arc.endAngle(twoPi));
+
+          const foreground = meter.append('path')
+            .attr('class', 'foreground')
+            .attr('fill', colors.green)
+            .attr('fill-opacity', 1)
+            .attr('stroke', colors.green)
+            .attr('stroke-width', 5)
+            .attr('stroke-opacity', 1)
+            .attr('filter', 'url(#blur)');
+
+          const front = meter.append('path')
+            .attr('class', 'foreground')
+            .attr('fill', colors.green)
+            .attr('fill-opacity', 1);
+
+          const numberText = meter.append('text')
+            .attr('fill', '#000000')
+            .attr('text-anchor', 'middle')
+            .attr('dy', '.35em');
+
+          function updateProgress(progress) {
+            foreground.attr('d', arc.endAngle(twoPi * progress));
+            front.attr('d', arc.endAngle(twoPi * progress));
+            numberText.text(formatPercent(progress));
+          }
+
+          let progress = startPercent;
+
+          (function loops() {
+            updateProgress(progress);
+
+            if (count > 0) {
+              count--;
+              progress += step;
+              setTimeout(loops, 10);
+            }
+          })();
+        })();
+        (function donorSurveyProgress() {
+
+          const colors = {
+            'green': '#A5FFD6',
+            'orange': '#FF9F1C',
+            'amber': '#E76F51',
+            'blue': '#35A7FF'
+          };
+
+          const radius = 50;
+          const border = 5;
+          const padding = 15;
+          const startPercent = 0;
+          let endPercent = self.donorSurveyCount / 138;
+          const twoPi = Math.PI * 2;
+          const formatPercent = d3.format('.0%');
+          const boxSize = (radius + padding) * 2;
+
+          let count = Math.abs((endPercent - startPercent) / 0.01);
+          let step = endPercent < startPercent ? -0.01 : 0.01;
+
+          const arc = d3.svg.arc()
+            .startAngle(0)
+            .innerRadius(radius)
+            .outerRadius(radius - border);
+
+          const parent = d3.select('div#donor-survey-progress');
+
+          const svg = parent.append('svg')
+            .attr('width', boxSize)
+            .attr('height', boxSize);
+
+          const defs = svg.append('defs');
+
+          const filter = defs.append('filter')
+            .attr('id', 'blur');
+
+          // filter.append('feGaussianBlur')
+          //   .attr('in', 'SourceGraphic')
+          //   .attr('stdDeviation', '7');
+
+          const g = svg.append('g')
+            .attr('transform', 'translate(' + boxSize / 2 + ',' + boxSize / 2 + ')');
+
+          const meter = g.append('g')
+            .attr('class', 'progress-meter');
+
+          meter.append('path')
+            .attr('class', 'background')
+            .attr('fill', '#ccc')
+            .attr('fill-opacity', 0.5)
+            .attr('d', arc.endAngle(twoPi));
+
+          const foreground = meter.append('path')
+            .attr('class', 'foreground')
+            .attr('fill', colors.blue)
+            .attr('fill-opacity', 1)
+            .attr('stroke', colors.blue)
+            .attr('stroke-width', 5)
+            .attr('stroke-opacity', 1)
+            .attr('filter', 'url(#blur)');
+
+          const front = meter.append('path')
+            .attr('class', 'foreground')
+            .attr('fill', colors.blue)
+            .attr('fill-opacity', 1);
+
+          const numberText = meter.append('text')
+            .attr('fill', '#000000')
+            .attr('text-anchor', 'middle')
+            .attr('dy', '.35em');
+
+          function updateProgress(progress) {
+            foreground.attr('d', arc.endAngle(twoPi * progress));
+            front.attr('d', arc.endAngle(twoPi * progress));
+            numberText.text(formatPercent(progress));
+          }
+
+          let progress = startPercent;
+
+          (function loops() {
+            updateProgress(progress);
+
+            if (count > 0) {
+              count--;
+              progress += step;
+              setTimeout(loops, 10);
+            }
+          })();
+        })();
+        (function ngoSurveyProgress() {
+
+          const colors = {
+            'green': '#A5FFD6',
+            'orange': '#FF9F1C',
+            'amber': '#E76F51',
+            'blue': '#35A7FF'
+          };
+
+          const radius = 50;
+          const border = 5;
+          const padding = 15;
+          const startPercent = 0;
+          let endPercent = self.ngoSurveyCount / 100;
+          const twoPi = Math.PI * 2;
+          const formatPercent = d3.format('.0%');
+          const boxSize = (radius + padding) * 2;
+
+          let count = Math.abs((endPercent - startPercent) / 0.01);
+          let step = endPercent < startPercent ? -0.01 : 0.01;
+
+          const arc = d3.svg.arc()
+            .startAngle(0)
+            .innerRadius(radius)
+            .outerRadius(radius - border);
+
+          const parent = d3.select('div#NGO-survey-progress');
+
+          const svg = parent.append('svg')
+            .attr('width', boxSize)
+            .attr('height', boxSize);
+
+          const defs = svg.append('defs');
+
+          const filter = defs.append('filter')
+            .attr('id', 'blur');
+
+          // filter.append('feGaussianBlur')
+          //   .attr('in', 'SourceGraphic')
+          //   .attr('stdDeviation', '7');
+
+          const g = svg.append('g')
+            .attr('transform', 'translate(' + boxSize / 2 + ',' + boxSize / 2 + ')');
+
+          const meter = g.append('g')
+            .attr('class', 'progress-meter');
+
+          meter.append('path')
+            .attr('class', 'background')
+            .attr('fill', '#ccc')
+            .attr('fill-opacity', 0.5)
+            .attr('d', arc.endAngle(twoPi));
+
+          const foreground = meter.append('path')
+            .attr('class', 'foreground')
+            .attr('fill', colors.amber)
+            .attr('fill-opacity', 1)
+            .attr('stroke', colors.amber)
+            .attr('stroke-width', 5)
+            .attr('stroke-opacity', 1)
+            .attr('filter', 'url(#blur)');
+
+          const front = meter.append('path')
+            .attr('class', 'foreground')
+            .attr('fill', colors.amber)
+            .attr('fill-opacity', 1);
+
+          const numberText = meter.append('text')
+            .attr('fill', '#000000')
+            .attr('text-anchor', 'middle')
+            .attr('dy', '.35em');
+
+          function updateProgress(progress) {
+            foreground.attr('d', arc.endAngle(twoPi * progress));
+            front.attr('d', arc.endAngle(twoPi * progress));
+            numberText.text(formatPercent(progress));
+          }
+
+          let progress = startPercent;
+
+          (function loops() {
+            updateProgress(progress);
+
+            if (count > 0) {
+              count--;
+              progress += step;
+              setTimeout(loops, 10);
+            }
+          })();
+        })();
+
+
+        /* Progress Chart 2: CHD */
 
       });
   }
