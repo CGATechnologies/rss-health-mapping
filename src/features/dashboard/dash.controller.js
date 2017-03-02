@@ -130,6 +130,7 @@ export default class DashboardController {
         self.donorSurveyCount = self.facSurveyMetaData.filter(k => k.formid === "157221")[ 0 ].submissions;
         self.ngoSurveyCount = self.facSurveyMetaData.filter(k => k.formid === "183415")[ 0 ].submissions;
 
+        /* facility survey progress chart */
         (function facilitySurveyProgress() {
 
           const colors = {
@@ -137,6 +138,13 @@ export default class DashboardController {
             'orange': '#FF9F1C',
             'amber': '#E76F51',
             'blue': '#35A7FF'
+          };
+
+          const margin = {
+            'top': 0,
+            'left': 0,
+            'right': 0,
+            'bottom': 0
           };
 
           const radius = 50;
@@ -202,6 +210,13 @@ export default class DashboardController {
             .attr('text-anchor', 'middle')
             .attr('dy', '.35em');
 
+          svg.append("text")
+            .attr("x", (boxSize / 2))
+            .attr("y", 0 - (margin.top - boxSize))
+            .attr("text-anchor", "middle")
+            .style("font-size", "10px")
+            .text("Health Facilities");
+
           function updateProgress(progress) {
             foreground.attr('d', arc.endAngle(twoPi * progress));
             front.attr('d', arc.endAngle(twoPi * progress));
@@ -220,6 +235,8 @@ export default class DashboardController {
             }
           })();
         })();
+
+        /* CHD Progress Chart */
         (function chdSurveyProgress() {
 
           const colors = {
@@ -227,6 +244,13 @@ export default class DashboardController {
             'orange': '#FF9F1C',
             'amber': '#E76F51',
             'blue': '#35A7FF'
+          };
+
+          const margin = {
+            'top': 0,
+            'left': 0,
+            'right': 0,
+            'bottom': 0
           };
 
           const radius = 50;
@@ -292,6 +316,13 @@ export default class DashboardController {
             .attr('text-anchor', 'middle')
             .attr('dy', '.35em');
 
+          svg.append("text")
+            .attr("x", (boxSize / 2))
+            .attr("y", 0 - (margin.top - boxSize))
+            .attr("text-anchor", "middle")
+            .style("font-size", "10px")
+            .text("County Health Depts");
+
           function updateProgress(progress) {
             foreground.attr('d', arc.endAngle(twoPi * progress));
             front.attr('d', arc.endAngle(twoPi * progress));
@@ -310,6 +341,8 @@ export default class DashboardController {
             }
           })();
         })();
+
+        /* donor survey progress chart */
         (function donorSurveyProgress() {
 
           const colors = {
@@ -317,6 +350,13 @@ export default class DashboardController {
             'orange': '#FF9F1C',
             'amber': '#E76F51',
             'blue': '#35A7FF'
+          };
+
+          const margin = {
+            'top': 0,
+            'left': 0,
+            'right': 0,
+            'bottom': 0
           };
 
           const radius = 50;
@@ -382,6 +422,13 @@ export default class DashboardController {
             .attr('text-anchor', 'middle')
             .attr('dy', '.35em');
 
+          svg.append("text")
+            .attr("x", (boxSize / 2))
+            .attr("y", 0 - (margin.top - boxSize))
+            .attr("text-anchor", "middle")
+            .style("font-size", "10px")
+            .text("Donors");
+
           function updateProgress(progress) {
             foreground.attr('d', arc.endAngle(twoPi * progress));
             front.attr('d', arc.endAngle(twoPi * progress));
@@ -400,6 +447,8 @@ export default class DashboardController {
             }
           })();
         })();
+
+        /* NGO survey progress chart */
         (function ngoSurveyProgress() {
 
           const colors = {
@@ -407,6 +456,13 @@ export default class DashboardController {
             'orange': '#FF9F1C',
             'amber': '#E76F51',
             'blue': '#35A7FF'
+          };
+
+          const margin = {
+            'top': 0,
+            'left': 0,
+            'right': 0,
+            'bottom': 0
           };
 
           const radius = 50;
@@ -471,6 +527,13 @@ export default class DashboardController {
             .attr('fill', '#000000')
             .attr('text-anchor', 'middle')
             .attr('dy', '.35em');
+
+          svg.append("text")
+            .attr("x", (boxSize / 2))
+            .attr("y", 0 - (margin.top - boxSize))
+            .attr("text-anchor", "middle")
+            .style("font-size", "10px")
+            .text("NGOs");
 
           function updateProgress(progress) {
             foreground.attr('d', arc.endAngle(twoPi * progress));

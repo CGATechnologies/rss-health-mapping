@@ -111,11 +111,21 @@
     </div>
     <!--/facility by type-->
     <div class="col-md-6 col-sm-6 col-xs-8" id="tile-survey-progress" ng-show="dashboard.dataLoaded">
-      <div id="fac-survey-progress"></div>
-      <div id="CHD-survey-progress"></div>
-      <div id="NGO-survey-progress"></div>
-      <div id="donor-survey-progress"></div>
-      <div id="chart" class="chart-container">
+      <div class="card">
+        <div class="card-content">
+          <h3 class="card-title">Survey Completion Progress</h3>
+          <div class="progress-charts">
+            <div id="fac-survey-progress"></div>
+            <!--<span class="prog-title">Health Facilities</span>-->
+            <div id="CHD-survey-progress"></div>
+            <!--<span class="prog-title">County Health Depts</span>-->
+            <div id="NGO-survey-progress"></div>
+            <!--<span class="prog-title">NGOs</span>-->
+            <div id="donor-survey-progress"></div>
+            <!--<span class="prog-title">Donors</span>-->
+          </div>
+        </div>
       </div>
     </div>
   </div>
+</div>
