@@ -70,6 +70,19 @@ export default class DashboardController {
         self.hrisFacProportion = (self.hrisFacFilter.length / self.items.length);
         // console.log('yo', self.hrisFacProportion);
 
+        // Count of health facilities per county
+        self.facCountByCounty = d3.nest()
+          .key(d => d.cName)
+          .rollup(v => v.length)
+          .entries(self.items);
+
+        console.log(self.facCountByCounty);
+
+        // Average facilities per county
+        self.facAvgByCounty = self.facilityCount / self.facCountByCounty.length;
+
+        console.log(self.facAvgByCounty);
+
 
 
         // staff average by facility type
