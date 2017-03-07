@@ -1,7 +1,7 @@
 import facilityTypeCount from './chart-facility-type-count';
 
 export default class DashboardController {
-  constructor(dataSources, ona) {
+  constructor(dataSources, ona, $q) {
 
     const self = this;
 
@@ -70,7 +70,51 @@ export default class DashboardController {
         self.hrisFacProportion = (self.hrisFacFilter.length / self.items.length);
         // console.log('yo', self.hrisFacProportion);
 
+        // Count of health facilities per county
+        self.facCountByCounty = d3.nest()
+          .key(d => d.cName)
+          .rollup(v => v.length)
+          .entries(self.items);
 
+        // console.log(self.facCountByCounty);
+
+        // Average facilities per county
+        self.facAvgByCounty = self.facilityCount / self.facCountByCounty.length;
+
+        // console.log(self.facAvgByCounty);
+
+        // Nesting Data for Treemap
+        // self.hrisTreemap = d3.nest()
+        //   .key(d => d.stName)
+        //   .key(d => d.cName)
+        //   .key(d => d.pName)
+        //   .key(d => d.fName)
+        //   .entries(self.items);
+
+        // console.log(self.hrisTreemap);
+
+        // Treemap Root Data Format
+        self.hrisTree = {
+          name: "root",
+          children:
+          d3.nest()
+            .key(d => d.stName)
+            .key(d => d.cName)
+            .key(d => d.pName)
+            .key(d => d.fName)
+            .entries(self.items)
+        };
+        console.log(self.hrisTree);
+
+        /*====================================================
+        ====================Treemap Chart=====================
+        =====================================================*/
+
+
+
+        /*////////////////////////////////////////////////////
+        ////////////////////End Treemap///////////////////////
+         ///////////////////////////////////////////////////*/
 
         // staff average by facility type
         self.staffAvgByFacilityType = d3.nest()

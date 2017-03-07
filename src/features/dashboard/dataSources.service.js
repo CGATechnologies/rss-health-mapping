@@ -28,6 +28,10 @@ class dataSources {
 
     return this.$http(getParams)
       .success(function (data, status, headers, config) {
+        console.log(data);
+
+        // do a chart function here calling data? Then just inject services into Controller?
+
         return data;
       })
       .error(function () {
