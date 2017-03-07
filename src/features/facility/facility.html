@@ -102,13 +102,52 @@
               </table>
             </div>
             <a href="#" value="show/hide staff" ng-click="fac.ShowHide()" class="btn btn-primary show-staff">
-              Facility Staff Information
+              Facility Staff
               </a>
-            <a href="/data" class="btn btn-info return-to-table">
+            <a href="#" value="show/hide indicators" ng-click="fac.indicatorShow()" class="btn btn-primary show-indicators">
+              Service Indicators
+              </a>
+            <a href="/tables" class="btn btn-info return-to-table">
               Return to Table
               </a>
             <br>
             <br>
+            <div class="col-md-4 col-lg-4" align="center"></div>
+            <div ng-show="fac.indicatorVisible" class="col-md-8 col-lg-8">
+              <table class="table table-staff-information">
+                <tbody>
+                  <tr>
+                    <th>Service Indicator</th>
+                    <th>Score</th>
+                  </tr>
+                  <tr>
+                    <td><strong>General Service Readiness</strong></td>
+                    <td><strong> XX%</strong></td>
+                  </tr>
+                  <tr>
+                    <td class="table-pad-left"> Basic Amenities</td>
+                    <td> XX%</td>
+                  </tr>
+                  <tr>
+                    <td class="table-pad-left"> Standard Precautions for Infection Prevention</td>
+                    <td> XX%</td>
+                  </tr>
+                  <tr>
+                    <td class="table-pad-left"> Diagnostic Capacity</td>
+                    <td> XX%</td>
+                  </tr>
+                  <tr>
+                    <td class="table-pad-left"> Essential Medicines</td>
+                    <td> XX%</td>
+                  </tr>
+                  <!--<tr ng-repeat="staff in fac.roleCount">
+                    <td>{{ staff.key }}: </td>
+                    <td>{{ staff.values }}</td>
+                    <td>{{ fac.facility.stName }}</td>
+                  </tr>-->
+                </tbody>
+              </table>
+            </div>
             <div class="col-md-4 col-lg-4" align="center"></div>
             <div ng-show="fac.isVisible" class="col-md-8 col-lg-8">
               <table class="table table-staff-information">

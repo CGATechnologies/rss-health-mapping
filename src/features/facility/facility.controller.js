@@ -106,10 +106,16 @@ export default class FacilityController {
 
         // show/hide DIV onclick
         self.isVisible = false;
+        self.indicatorVisible = false;
         self.ShowHide = function () {
           // If DIV is visible it will be hidden, and vice versa
           self.isVisible = self.isVisible ? false : true;
         };
+
+        self.indicatorShow = function () {
+          self.indicatorVisible = self.indicatorVisible ? false : true;
+        };
+
 
       });
   }
