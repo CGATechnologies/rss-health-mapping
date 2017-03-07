@@ -59,7 +59,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="facility in hrisTable.facilities | orderBy:sortType:sortReverse | filter:searchHris">
+    <tr ng-repeat="facility in hrisTable.cleanFac | orderBy:sortType:sortReverse | filter:searchHris">
       <td><a ui-sref="facility({ facilityId: facility.FID })">{{ facility.fName }}</a></td>
         <td>{{ facility.fOwnership }}</td>
         <td>{{ facility.fDonors }}</td>
