@@ -42,8 +42,8 @@
   <tbody>
     <tr ng-repeat="indicator in home.indicators | orderBy:sortType:sortReverse | filter:searchIndicators">
       <td>{{ indicator.name }}</td>
-        <td class="centered"><i class="fa fa-circle fa-3" ng-style="{background-color: home.service}" ></i></td>
-        <td class="centered"><i class="fa fa-circle fa-3" ng-style="{background-color: home.outcomes}" ></i></td>
+        <td class="centered"><i class="fa fa-circle fa-3" ng-style="{'color': home.service <=10 ? 'red' : 'orange'}" ></i></td>
+        <td class="centered"><i class="fa fa-circle fa-3" ng-style="{'color': home.outcomes <=10 ? 'red' : 'orange'}" ></i></td>
         <td>{{ indicator.funding }}</td>
       </tr>
   </tbody>
