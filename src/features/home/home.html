@@ -40,7 +40,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="indicator in home.indicators | orderBy:sortType:sortReverse">
+    <tr ng-repeat="indicator in home.indicators | orderBy:sortType:sortReverse | filter:searchIndicators">
       <td>{{ indicator.name }}</td>
         <td class="centered"><i class="fa fa-circle fa-3" ng-style="{background-color: home.service}" ></i></td>
         <td class="centered"><i class="fa fa-circle fa-3" ng-style="{background-color: home.outcomes}" ></i></td>
@@ -49,5 +49,3 @@
   </tbody>
 </table>
 </div>
-
-{{ home.indicators }}

@@ -83,6 +83,7 @@ export default class HomeController {
       { name: "Yirol West", service: "orange", outcomes: "orange", funding: "$ XXXX" },
     ];
 
+    this.searchIndicators = '';
     const self = this;
 
     console.log(self.indicators);
