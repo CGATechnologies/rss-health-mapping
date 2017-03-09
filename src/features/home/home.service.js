@@ -2,7 +2,11 @@ import angular from 'angular';
 
 class home {
   constructor() {
-    this.counties = [
+
+  }
+
+  getIndicatorData() {
+    this.indicators = [
       { name: "Abiemnon", service: "orange", outcomes: "orange", funding: "$ XXXX" },
       { name: "Abyei", service: "orange", outcomes: "orange", funding: "$ XXXX" },
       { name: "Akobo", service: "orange", outcomes: "orange", funding: "$ XXXX" },
@@ -83,12 +87,6 @@ class home {
       { name: "Yirol East", service: "orange", outcomes: "orange", funding: "$ XXXX" },
       { name: "Yirol West", service: "orange", outcomes: "orange", funding: "$ XXXX" },
     ];
-  }
-
-  getIndicatorData() {
-    this.data = this.counties;
-    console.log(this.data);
-
   }
 }
 
