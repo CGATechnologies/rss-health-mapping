@@ -3,8 +3,8 @@ export default class HomeController {
 
     const self = this;
     //Inject the cartoMap Service
-    cartoMap.loadMap();
+    cartoMap.getIndicatorData();
   }
 }
 
-HomeController.$inject = [ 'cartoMap' ];
+HomeController.$inject = [ 'home' ];

@@ -1,0 +1,97 @@
+import angular from 'angular';
+
+class home {
+  constructor() {
+    this.counties = [
+      { name: "Abiemnon", service: "", outcomes: "", funding: "" },
+      { name: "Abyei", service: "", outcomes: "", funding: "" },
+      { name: "Akobo", service: "", outcomes: "", funding: "" },
+      { name: "Akoka", service: "", outcomes: "", funding: "" },
+      { name: "Anzara", service: "", outcomes: "", funding: "" },
+      { name: "Aweil Centre", service: "", outcomes: "", funding: "" },
+      { name: "Aweil East", service: "", outcomes: "", funding: "" },
+      { name: "Aweil North", service: "", outcomes: "", funding: "" },
+      { name: "Aweil South", service: "", outcomes: "", funding: "" },
+      { name: "Aweil West", service: "", outcomes: "", funding: "" },
+      { name: "Awerial", service: "", outcomes: "", funding: "" },
+      { name: "Ayod", service: "", outcomes: "", funding: "" },
+      { name: "Bagari", service: "", outcomes: "", funding: "" },
+      { name: "Bor", service: "", outcomes: "", funding: "" },
+      { name: "Budi", service: "", outcomes: "", funding: "" },
+      { name: "Cueibet", service: "", outcomes: "", funding: "" },
+      { name: "Duk", service: "", outcomes: "", funding: "" },
+      { name: "Ezo", service: "", outcomes: "", funding: "" },
+      { name: "Fangak", service: "", outcomes: "", funding: "" },
+      { name: "Gogrial East", service: "", outcomes: "", funding: "" },
+      { name: "Gogrial West", service: "", outcomes: "", funding: "" },
+      { name: "Guit", service: "", outcomes: "", funding: "" },
+      { name: "Ibba", service: "", outcomes: "", funding: "" },
+      { name: "Ikotos", service: "", outcomes: "", funding: "" },
+      { name: "Juba", service: "", outcomes: "", funding: "" },
+      { name: "Jur River", service: "", outcomes: "", funding: "" },
+      { name: "Kajo Keji", service: "", outcomes: "", funding: "" },
+      { name: "Kapoeta East", service: "", outcomes: "", funding: "" },
+      { name: "Kapoeta North", service: "", outcomes: "", funding: "" },
+      { name: "Kapoeta South", service: "", outcomes: "", funding: "" },
+      { name: "Koch", service: "", outcomes: "", funding: "" },
+      { name: "Kodok", service: "", outcomes: "", funding: "" },
+      { name: "Lainya", service: "", outcomes: "", funding: "" },
+      { name: "Leer", service: "", outcomes: "", funding: "" },
+      { name: "Longuchuk", service: "", outcomes: "", funding: "" },
+      { name: "Lopa/Lafon", service: "", outcomes: "", funding: "" },
+      { name: "Maban", service: "", outcomes: "", funding: "" },
+      { name: "Magwi", service: "", outcomes: "", funding: "" },
+      { name: "Maiwut", service: "", outcomes: "", funding: "" },
+      { name: "Malakal", service: "", outcomes: "", funding: "" },
+      { name: "Manyo", service: "", outcomes: "", funding: "" },
+      { name: "Maridi", service: "", outcomes: "", funding: "" },
+      { name: "Mayendit", service: "", outcomes: "", funding: "" },
+      { name: "Mayom", service: "", outcomes: "", funding: "" },
+      { name: "Melut", service: "", outcomes: "", funding: "" },
+      { name: "Morobo", service: "", outcomes: "", funding: "" },
+      { name: "Mundri East", service: "", outcomes: "", funding: "" },
+      { name: "Mundri West", service: "", outcomes: "", funding: "" },
+      { name: "Mvolo", service: "", outcomes: "", funding: "" },
+      { name: "Nagero", service: "", outcomes: "", funding: "" },
+      { name: "Nasir", service: "", outcomes: "", funding: "" },
+      { name: "Nyirol", service: "", outcomes: "", funding: "" },
+      { name: "Panrieng", service: "", outcomes: "", funding: "" },
+      { name: "Panyijar", service: "", outcomes: "", funding: "" },
+      { name: "Panyikang", service: "", outcomes: "", funding: "" },
+      { name: "Pibor", service: "", outcomes: "", funding: "" },
+      { name: "Pigi", service: "", outcomes: "", funding: "" },
+      { name: "Pochalla", service: "", outcomes: "", funding: "" },
+      { name: "Raga", service: "", outcomes: "", funding: "" },
+      { name: "Renk", service: "", outcomes: "", funding: "" },
+      { name: "Rubkona", service: "", outcomes: "", funding: "" },
+      { name: "Rumbek Centre", service: "", outcomes: "", funding: "" },
+      { name: "Rumbek East", service: "", outcomes: "", funding: "" },
+      { name: "Rumbek North", service: "", outcomes: "", funding: "" },
+      { name: "Tambura", service: "", outcomes: "", funding: "" },
+      { name: "Terekeka", service: "", outcomes: "", funding: "" },
+      { name: "Tonj East", service: "", outcomes: "", funding: "" },
+      { name: "Tonj North", service: "", outcomes: "", funding: "" },
+      { name: "Tonj South", service: "", outcomes: "", funding: "" },
+      { name: "Torit", service: "", outcomes: "", funding: "" },
+      { name: "Twic", service: "", outcomes: "", funding: "" },
+      { name: "Twic East", service: "", outcomes: "", funding: "" },
+      { name: "Ulang", service: "", outcomes: "", funding: "" },
+      { name: "Uror", service: "", outcomes: "", funding: "" },
+      { name: "Wulu", service: "", outcomes: "", funding: "" },
+      { name: "Yambio", service: "", outcomes: "", funding: "" },
+      { name: "Yei", service: "", outcomes: "", funding: "" },
+      { name: "Yirol East", service: "", outcomes: "", funding: "" },
+      { name: "Yirol West", service: "", outcomes: "", funding: "" },
+    ];
+  }
+
+  getIndicatorData() {
+    this.data = this.counties;
+    console.log(this.data);
+
+  }
+}
+
+export default angular.module('services.home', [])
+  .service('home', home)
+  .name;

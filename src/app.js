@@ -19,6 +19,7 @@ import Components from './components';
 // import config file and modules here
 import routing from './app.config';
 import home from './features/home';
+import map from './features/map';
 import facility from './features/facility';
 import dashboard from './features/dashboard';
 import table from './features/data-tables';
@@ -26,7 +27,7 @@ import pillars from './features/pillars';
 import about from './features/about';
 
 angular.module('app', [
-  uirouter, home, facility, dashboard, table, pillars, Components, about, "nvd3"
+  uirouter, home, map, facility, dashboard, table, pillars, Components, about, "nvd3"
 ])
   // .directive('app', app)
   // .controller('AppCtrl', AppCtrl)
