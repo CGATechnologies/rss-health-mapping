@@ -4,6 +4,8 @@ export default class MapController {
     const self = this;
     //Inject the cartoMap Service
     cartoMap.loadMap();
+    // cartoMap.createLayer();
+    // cartoMap.createSelector();
   }
 }
 

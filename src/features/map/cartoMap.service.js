@@ -3,7 +3,6 @@ import angular from 'angular';
 class cartoMap {
 
   loadMap() {
-    console.log('hitting map service');
 
     let currentHeight = window.innerHeight - 50;
     let mapHeight = document.getElementById('map').style.height;
@@ -12,8 +11,6 @@ class cartoMap {
       mapHeight = currentHeight;
     }
 
-    console.log(mapHeight);
-    console.log(currentHeight);
     let url = 'https://cgamap.carto.com/api/v2/viz/ef0fd039-511e-4c78-a39a-a739351493e7/viz.json';
     cartodb.createVis('map', url, {
       shareable: true,
@@ -31,32 +28,54 @@ class cartoMap {
       .done((vis, layers) => {
 
         // Set max zoom out
+        const subLayer = layers[1].getSubLayer(0);
+        const layerCount = layers[1].getSubLayerCount();
+        let layerArrays = vis.getLayers(1);
+        let layerArray = layerArrays[1].getSubLayers(0);
+        console.log(layerArray);
+        let zoom = vis.map.getZoom();
+        // console.log('zoom zoom',getSubLayers);
+        createSelector(subLayer);
         vis.map.set({
           minZoom: 6,
           maxZoom: 10
-        });
-
-        let layerArray = vis.getLayers();
-        console.log(layerArray);
+        });      
 
         // layer 0 is the base layer, layer 1 is cartodb layer
         // setInteraction is disabled by default
         layers[ 1 ].setInteraction(true);
-        layers[ 1 ].on('featureOver', (e, latlng, pos, data) => {
-          // cartodb.log.log(e, latlng, pos, data);
-        });
-        // you can get the native map to work with it
-        var map = vis.getNativeMap();
 
-        // now, perform any operations you need
-        // map.setZoom(3);
-        // map.panTo([50.5, 30.5]);
+        // you can get the native map to work with it
+        let map = vis.getNativeMap();
+
+        function createSelector(layer, num) {
+          let $options = $('#layer_selector li');
+          $options.click(function(e) {
+            // get the area of the selected layer
+            let $li = $(e.target);
+            console.log($li);
+            let area = $li.attr('data');
+            // deselect all and select the clicked one
+           $options.removeClass('selected');
+            $li.addClass('selected');
+            for (let i = 0; i < layerCount; i++) {
+              if (i === area) {
+                layerArray[i].show();
+              } else {
+                layerArray[i].hide();
+              }
+            }
+          });
+        }
+
+
       })
       .error(function (err) {
         console.log(err);
       });
   }
 }
+
 
 export default angular.module('services.carto-map', [])
   .service('cartoMap', cartoMap)

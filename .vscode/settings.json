@@ -4,7 +4,6 @@
     "editor.wordWrap": "on",
     "go.lintTool": "gometalinter",
     "editor.tabCompletion": true,
-    "files.autoSave": "onFocusChange",
     "html.format.indentHandlebars": true
 
 }
