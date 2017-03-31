@@ -2,9 +2,18 @@
   <h1>Hello, {{home.name}}</h1>
 </div> -->
 <div class="map-container" style="height:600px;">
-  <div id="map" style="width:100%; height:100%;"></div>
+	<div id="map" style="width:100%; height:100%;"></div>
+	<div id="layer_selector" class="cartodb-infobox">
+		<ul>
+			<li data="all" class="selected">Health Facilities</li>
+			<li data="1000">Services by State</li>
+			<li data="6000">Outcomes by State</li>
+			<li data="10000">Funding by State</li>
+			<li data="10000">Services by County</li>
+			<li data="10000">Outcomes by County</li>
+			<li data="10000">Funding by County</li>
+		</ul>
+	</div>
 </div>
-
-
 
 <!-- <button class="btn btn-primary" ng-click="home.changeName()">Change</button> -->
