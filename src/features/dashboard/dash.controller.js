@@ -1,4 +1,5 @@
 import facilityTypeCount from './chart-facility-type-count';
+import genericBar from './generic-bar';
 
 export default class DashboardController {
   constructor(dataSources, ona, $q) {
@@ -93,29 +94,6 @@ export default class DashboardController {
 
         // console.log(self.hrisTreemap);
 
-        // Treemap Root Data Format
-        self.hrisTree = {
-          name: "root",
-          children:
-          d3.nest()
-            .key(d => d.stName)
-            .key(d => d.cName)
-            .key(d => d.pName)
-            .key(d => d.fName)
-            .entries(self.items)
-        };
-        console.log(self.hrisTree);
-
-        /*====================================================
-        ====================Treemap Chart=====================
-        =====================================================*/
-
-
-
-        /*////////////////////////////////////////////////////
-        ////////////////////End Treemap///////////////////////
-         ///////////////////////////////////////////////////*/
-
         // staff average by facility type
         self.staffAvgByFacilityType = d3.nest()
           .key(function (d) { return d.fTypeCode; })
@@ -146,7 +124,7 @@ export default class DashboardController {
         self.facTypeChartData = d3.entries(self.facTypeCount);
 
         // Chart: Count of Facilities by Type
-        self.chartFacTypeCountOptions = facilityTypeCount.facilityTypeCount.options;
+        self.chartFacTypeCountOptions = facilityTypeCount.options;
         self.chartFacTypeCountData = [ {
           key: "Cumulative Return",
           values: self.facTypeChartData
@@ -154,6 +132,53 @@ export default class DashboardController {
         // console.log(self.facTypeChartData);
       });
 
+      //generic Bar Chart
+      self.genericBarOptions = genericBar.options;
+
+      self.genericBarData = [
+            {
+                "key": "Series1",
+                "color": "#d62728",
+                "values": [
+                    {
+                        "label" : "Group A" ,
+                        "value" : 1.8746444827653
+                    } ,
+                    {
+                        "label" : "Group B" ,
+                        "value" : 8.0961543492239
+                    } ,
+                    {
+                        "label" : "Group C" ,
+                        "value" : 0.57072943117674
+                    } ,
+                    {
+                        "label" : "Group D" ,
+                        "value" : 2.4174010336624
+                    } ,
+                    {
+                        "label" : "Group E" ,
+                        "value" : 0.72009071426284
+                    } ,
+                    {
+                        "label" : "Group F" ,
+                        "value" : 0.77154485523777
+                    } ,
+                    {
+                        "label" : "Group G" ,
+                        "value" : 0.90152097798131
+                    } ,
+                    {
+                        "label" : "Group H" ,
+                        "value" : 0.91445417330854
+                    } ,
+                    {
+                        "label" : "Group I" ,
+                        "value" : 0.055746319141851
+                    }
+                ]
+            }
+        ];
     dataSources.getHrisRecentTimestamp()
       .then(function (hrisStamp) {
         self.hrisUpdate = Date.parse(hrisStamp.data);
@@ -174,7 +199,10 @@ export default class DashboardController {
         self.donorSurveyCount = self.facSurveyMetaData.filter(k => k.formid === "157221")[ 0 ].submissions;
         self.ngoSurveyCount = self.facSurveyMetaData.filter(k => k.formid === "183415")[ 0 ].submissions;
 
-        /* facility survey progress chart */
+        
+        /*====================================================
+        ===============Survey Progress Charts=================
+        =====================================================*/
         (function facilitySurveyProgress() {
 
           const colors = {

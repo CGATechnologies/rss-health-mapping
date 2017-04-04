@@ -1,5 +1,4 @@
 export default {
-  facilityTypeCount: {
     options: {
       chart: {
         type: 'discreteBarChart',
@@ -61,5 +60,4 @@ export default {
 
       }
     }
-  }
 };
