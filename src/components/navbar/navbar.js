@@ -6,7 +6,7 @@ class NavBarController {
     this.brand = 'South Sudan Health Info';
 
     this.items = [ {
-      href: '/map',
+      href: '/',
       label: 'Map',
       isActive: true
     },
