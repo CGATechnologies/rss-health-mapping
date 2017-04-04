@@ -19,7 +19,7 @@ class cartoMap {
       search: true,
       tiles_loader: true,
       time_slider: false,
-      layer_selector: true,
+      layer_selector: false,
       scrollwheel: false,
       center_lat: 7.123519,
       center_lon: 30.119062,
@@ -48,7 +48,8 @@ class cartoMap {
         // you can get the native map to work with it
         let map = vis.getNativeMap();
 
-        function createSelector(layer, num) {
+        // TODO: Fix the toggle here
+        function createSelector(layer, i) {
           let $options = $('#layer_selector li');
           $options.click(function(e) {
             // get the area of the selected layer
@@ -58,16 +59,16 @@ class cartoMap {
             // deselect all and select the clicked one
            $options.removeClass('selected');
             $li.addClass('selected');
-            for (let i = 0; i < layerCount; i++) {
-              if (i === area) {
-                layerArray[i].show();
-              } else {
-                layerArray[i].hide();
-              }
-            }
+            let isSelected = $li.toggleClass('selected');
+            // for (let i = 0; i < layerCount; i++) {
+              if (isSelected) {
+                // isSelected = !isSelected;
+                $li.addClass('selected');
+                layerArray[area].toggle();
+              } 
+            // }
           });
         }
-
 
       })
       .error(function (err) {
