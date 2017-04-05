@@ -2,10 +2,8 @@
 import angular from 'angular';
 import uirouter from 'angular-ui-router';
 
-// import highcharts and highcharts-ng
-// var Highcharts = require('highcharts');
-// require('highcharts/modules/exporting')(Highcharts);
-// import 'highcharts-ng';
+// import highcharts and highcharts-ng var Highcharts = require('highcharts');
+// require('highcharts/modules/exporting')(Highcharts); import 'highcharts-ng';
 import 'angular-nvd3';
 
 // import CSS, FA, and bootstrap
@@ -18,7 +16,7 @@ import Components from './components';
 
 // import config file and modules here
 import routing from './app.config';
-// import home from './features/home';
+import indicators from './features/indicators';
 import map from './features/map';
 import facility from './features/facility';
 import dashboard from './features/dashboard';
@@ -27,16 +25,26 @@ import pillars from './features/pillars';
 import about from './features/about';
 
 angular.module('app', [
-  uirouter, map, facility, dashboard, table, pillars, Components, about, "nvd3"
+  uirouter,
+  map,
+  facility,
+  dashboard,
+  table,
+  pillars,
+  indicators,
+  Components,
+  about,
+  "nvd3"
 ])
-  // .directive('app', app)
-  // .controller('AppCtrl', AppCtrl)
+// .directive('app', app) .controller('AppCtrl', AppCtrl)
   .config(routing)
-  .filter('percentage', [ '$filter', function ($filter) {
-    return function (input, decimals) {
-      return $filter('number')(input * 100, decimals) + '%';
-    };
-  }]);
-
+  .filter('percentage', [
+    '$filter',
+    function ($filter) {
+      return function (input, decimals) {
+        return $filter('number')(input * 100, decimals) + '%';
+      };
+    }
+  ]);
 
 // export default MODULE_NAME;
