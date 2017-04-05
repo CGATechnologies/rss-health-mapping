@@ -1,6 +1,4 @@
 <div class="container-fluid">
-  <!--<progress id="progress" max="100" value="{{dashboard.items.config.progress.progressBar}}"></progress>{{dashboard.items.config.progress.progressCounter}}%-->
-  <!--data source bar-->
   <div class="centered">
     <div class="row tile_sources">
       <div class="col-md-2 col-sm-4 col-xs-6 data_sources"></div>
@@ -113,12 +111,15 @@
   <!--facility by type-->
   <div class="row">
     <div class="col-md-6 col-sm-6 col-xs-8" id="tile-facility-count">
-      <div class="fac-count-container">
-        <h3 class="card-title" ng-show="dashboard.dataLoaded">Count of Facilities by Type</h3>
-        <nvd3 onload="dashboard.resizeEvent" options="dashboard.chartFacTypeCountOptions" data="dashboard.chartFacTypeCountData"></nvd3>
+      <div class="card">
+        <div class="card-content">
+          <h3 class="card-title" ng-show="dashboard.dataLoaded">Count of Facilities by Type</h3>
+          <nvd3 onload="dashboard.resizeEvent" options="dashboard.chartFacTypeCountOptions" data="dashboard.chartFacTypeCountData"></nvd3>
+        </div>
       </div>
     </div>
     <!--/facility by type-->
+    <!--Progress Charts-->
     <div class="col-md-6 col-sm-6 col-xs-8" id="tile-survey-progress" ng-show="dashboard.dataLoaded">
       <div class="card">
         <div class="card-content">
@@ -136,9 +137,10 @@
         </div>
       </div>
     </div>
+    <!--/Progress Charts-->
     <!--Generic bar chart-->
-    <div class="col-md-6 col-sm-6 col-xs-8" id="tile-generic-bar-chart" ng-show="dashboard.dataLoaded">
-      <div class="card">
+    <div class="col-md-6 col-sm-6 col-xs-8" id="tile-generic-bar-chart">
+      <div class="card" ng-show="dashboard.dataLoaded">
         <div class="card-content">
           <h3 class="card-title">Generic Horizontal Bar Chart</h3>
           <div class="progress-charts">

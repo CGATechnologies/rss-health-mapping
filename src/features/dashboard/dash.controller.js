@@ -261,6 +261,12 @@ export default class DashboardController {
             .attr('width', boxSize)
             .attr('height', boxSize);
 
+          svg
+            .append("rect")
+            .attr("width", "100%")
+            .attr("height", "100%")
+            .attr("fill", "white");
+
           const defs = svg.append('defs');
 
           const filter = defs
@@ -380,6 +386,12 @@ export default class DashboardController {
             .attr('width', boxSize)
             .attr('height', boxSize);
 
+          svg
+            .append("rect")
+            .attr("width", "100%")
+            .attr("height", "100%")
+            .attr("fill", "white");
+
           const defs = svg.append('defs');
 
           const filter = defs
@@ -497,6 +509,12 @@ export default class DashboardController {
             .append('svg')
             .attr('width', boxSize)
             .attr('height', boxSize);
+
+          svg
+            .append("rect")
+            .attr("width", "100%")
+            .attr("height", "100%")
+            .attr("fill", "white");
 
           const defs = svg.append('defs');
 
@@ -616,6 +634,12 @@ export default class DashboardController {
             .append('svg')
             .attr('width', boxSize)
             .attr('height', boxSize);
+
+          svg
+            .append("rect")
+            .attr("width", "100%")
+            .attr("height", "100%")
+            .attr("fill", "white");
 
           const defs = svg.append('defs');
 
