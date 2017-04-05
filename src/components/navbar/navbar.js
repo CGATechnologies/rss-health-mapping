@@ -5,39 +5,37 @@ class NavBarController {
 
     this.brand = 'South Sudan Health Info';
 
-    this.items = [ {
-      href: '/',
-      label: 'Map',
-      isActive: true
-    },
-    {
-      href: '/dashboard',
-      label: 'Dashboard',
-      isActive: true
-    },
-    {
-      href: '/health-pillars',
-      label: 'Health Pillars',
-      isActive: true
-    },
-    {
-      href: '/tables',
-      label: 'Tables',
-      isActive: true
-    },
-    {
-      href: '/about',
-      label: 'About',
-      isActive: true
-    }];
+    this.items = [
+      {
+        href: '/',
+        label: 'Map',
+        isActive: true
+      }, {
+        href: '/dashboard',
+        label: 'Dashboard',
+        isActive: true
+      },
+      // {   href: '/health-pillars',   label: 'Health Pillars',   isActive: true },
+      {
+        href: '/tables',
+        label: 'Tables',
+        isActive: true
+      }, {
+        href: '/about',
+        label: 'About',
+        isActive: true
+      }
+    ];
 
   }
 
   onItemClicked(clickedItem) {
-    this.items = this.items.map((item) => {
-      item.isActive = item.label === clickedItem.label;
-      return item;
-    });
+    this.items = this
+      .items
+      .map((item) => {
+        item.isActive = item.label === clickedItem.label;
+        return item;
+      });
   }
 }
 
