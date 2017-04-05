@@ -1,7 +1,25 @@
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<style>
+  body {
+    margin: 30px 0px;
+  }
+
+  .navbar-default .navbar-nav>li.dropdown:hover>a,
+  .navbar-default .navbar-nav>li.dropdown:hover>a:hover,
+  .navbar-default .navbar-nav>li.dropdown:hover>a:focus {
+    background-color: rgb(231, 231, 231);
+    color: rgb(85, 85, 85);
+  }
+
+  li.dropdown:hover>.dropdown-menu {
+    display: block;
+  }
+</style>
+
+<!--<nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+        aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -11,31 +29,92 @@
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
+        <li class=""><a href="/map">Map</li>
+        <li class="dropdown">
+          <a href="/dashboard" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dashboard <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/dashboard/hris">HRIS</a></li>
+            <li><a href="/dashboard/surveys">Facility Surveys</a></li>
+            <li><a href="/dashboard/hmis">HMIS</a></li>
+            <li><a href="/dashboard/pmis">PMIS</a></li>
+          </ul>
+        </li>
+        <li><a href="/tables">Tables</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>-->
+<!--<div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
         <li class="dropdown" ng-repeat="item in $ctrl.items" ng-class="{ active: item.isActive }">
           <a data-toggle="dropdown" class="dropdown-toggle" ng-click="$ctrl.onItemClicked(item)" ng-href="{{ item.href }}">{{ item.label }}</a>
           <ul class="dropdown-menu" ng-repeat="drop in $ctrl.items.dropdown">
             <li><a ng-href="{{ drop.href }}">{{ drop.label }}</a></li>
           </ul>
         </li>
-      </ul>
-
+      </ul>-->
+<!--
       <ul class="nav navbar-nav navbar-right">
-        <!--<li>
-          <a href="#"><i class="fa fa-user"></i></a>
-        </li>-->
         <li>
           <a ui-sref="contact"><i class="fa fa-envelope"></i></a>
         </li>
-        <!--<li>
-                    <a href="#"><i class="fa fa-question"></i></a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-bell"></i></a>
-                </li>-->
-        <!--<li>
-          <a href="#"><i class="fa fa-sign-out"></i></a>
-        </li>-->
       </ul>
     </div>
   </div>
-</nav>
+</nav>-->
+
+<div class="container">
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <a class="navbar-brand" href="#">Brand</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+              <li class="divider"></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="navbar-form navbar-left" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Link</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+</div>
