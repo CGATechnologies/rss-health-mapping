@@ -8,12 +8,12 @@ export default function routes($stateProvider) {
     controllerAs: 'ind'
   }).state('readiness', {
     url: '/indicators/service-readiness',
-    template: require('./readiness.html'),
+    template: require('./indicators.readiness.html'),
     controller: 'IndicatorsController',
     controllerAs: 'ind'
   }).state('availability', {
     url: '/indicators/service-availability',
-    template: require('./availability.html'),
+    template: require('./indicators.availability.html'),
     controller: 'IndicatorsController',
     controllerAs: 'ind'
   });
