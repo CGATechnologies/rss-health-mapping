@@ -139,9 +139,9 @@
     </div>
     <!--/Progress Charts-->
     <!--Generic bar chart-->
-    <div class="col-md-6 col-sm-6 col-xs-8" id="tile-generic-bar-chart">
-      <div class="card" ng-show="dashboard.dataLoaded">
-        <div class="card-content">
+    <div class="col-md-5 col-sm-5 col-xs-8" id="tile-generic-bar-chart" ng-show="dashboard.dataLoaded">
+      <div class="card">
+        <div class="card-content" ng-show="dashboard.dataLoaded">
           <h3 class="card-title">Generic Horizontal Bar Chart</h3>
           <div class="progress-charts">
             <nvd3 options="dashboard.genericBarOptions" data="dashboard.genericBarData"></nvd3>

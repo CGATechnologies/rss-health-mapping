@@ -7,3 +7,11 @@
 .text-center {
   text-align: center
 }
+
+.description-title {
+  text-decoration: underline;
+}
+
+ol li {
+  font-size: 12px;
+}
