@@ -6,10 +6,10 @@ import './dash.css';
 import routing from './dash.routes';
 import DashboardController from './dash.controller';
 import dataSources from './dataSources.service';
-import ona from './ona.service';
 // Import other dashboard services here
 
-export default angular.module('app.dash', [ uirouter, dataSources, ona ])
+export default angular
+  .module('app.dash', [uirouter, dataSources])
   .config(routing)
   .controller('DashboardController', DashboardController)
   .name;

@@ -2,7 +2,7 @@ import facilityTypeCount from './chart-facility-type-count';
 import genericBar from './generic-bar';
 
 export default class DashboardController {
-  constructor(dataSources, ona, $q) {
+  constructor(dataSources, $q) {
 
     const self = this;
 
@@ -718,4 +718,4 @@ export default class DashboardController {
   }
 }
 
-DashboardController.$inject = ['dataSources', 'ona'];
+DashboardController.$inject = ['dataSources'];

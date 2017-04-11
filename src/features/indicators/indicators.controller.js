@@ -1,5 +1,9 @@
 export default class IndicatorsController {
-  constructor() {}
+  constructor(availability) {
+    const self = this;
+
+    availability.basicAmenitiesMap();
+  }
 }
 
 IndicatorsController.$inject = ['availability', 'readiness'];
